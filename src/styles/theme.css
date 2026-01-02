@@ -1,0 +1,287 @@
+/**
+ * Axiom Group Design Token System
+ * 
+ * Philosophy:
+ * - Dark premium, layered and breathable
+ * - Stillness by default, response on intent
+ * - Light appears as feedback, not decoration
+ * - No trend-based styling
+ * - Scalable to sub-companies
+ */
+
+:root {
+  /* ============================================
+     COLOR LAYERS
+     ============================================
+     Intent: Create a layered depth system where surfaces
+     progressively lighten from the base canvas. Each layer
+     provides subtle separation without harsh contrast.
+     Hover/active states use lightening logic for feedback. */
+  
+  /* Base canvas - near-black foundation */
+  --color-layer-base: oklch(0.08 0 0);
+  
+  /* Section surface - slightly elevated from base */
+  --color-layer-section: oklch(0.10 0 0);
+  
+  /* Elevated surface - cards and floating elements */
+  --color-layer-elevated: oklch(0.12 0 0);
+  
+  /* Border and divider - subtle separation */
+  --color-layer-border: oklch(0.15 0 0);
+  
+  /* Hover state - lightening multiplier (applied via opacity/lightness) */
+  --color-layer-hover-lighten: 0.08;
+  
+  /* Active state - more pronounced lightening */
+  --color-layer-active-lighten: 0.12;
+
+
+  /* ============================================
+     TEXT COLORS
+     ============================================
+     Intent: Hierarchical text contrast system ensuring
+     readability while maintaining the dark premium aesthetic.
+     Primary text is high contrast, secondary provides context,
+     muted text is for metadata and less important information. */
+  
+  /* Primary text - maximum readability */
+  --color-text-primary: oklch(0.95 0 0);
+  
+  /* Secondary text - contextual information */
+  --color-text-secondary: oklch(0.70 0 0);
+  
+  /* Muted text - metadata, labels, less important */
+  --color-text-muted: oklch(0.50 0 0);
+
+
+  /* ============================================
+     ACCENT SYSTEM
+     ============================================
+     Intent: Single muted accent (platinum/gold) used sparingly
+     for CTAs, focus states, and strategic dividers only.
+     The accent is muted to maintain sophistication and avoid
+     decorative use. Restricted usage ensures it remains impactful. */
+  
+  /* Muted accent - platinum/gold tone */
+  --color-accent-base: oklch(0.75 0.05 85);
+  
+  /* Accent hover state - subtle brightening */
+  --color-accent-hover: oklch(0.80 0.05 85);
+  
+  /* Accent active state */
+  --color-accent-active: oklch(0.70 0.05 85);
+  
+  /* Accent usage rules (documentation only - enforced in code):
+     - CTA buttons and links
+     - Focus indicators
+     - Strategic dividers (not all dividers)
+     - NOT for decorative elements */
+
+
+  /* ============================================
+     INTERACTION FEEDBACK
+     ============================================
+     Intent: Subtle feedback system using glow and shadow
+     to indicate interactivity. Glow appears on intent,
+     shadows provide elevation context. Border contrast
+     changes signal state transitions. */
+  
+  /* Glow intensity levels */
+  --glow-intensity-low: 0 0 8px oklch(0.75 0.05 85 / 0.15);
+  --glow-intensity-medium: 0 0 16px oklch(0.75 0.05 85 / 0.25);
+  --glow-intensity-high: 0 0 24px oklch(0.75 0.05 85 / 0.35);
+  
+  /* Shadow elevation - rest state (minimal) */
+  --shadow-elevation-rest: 0 2px 4px oklch(0 0 0 / 0.2);
+  
+  /* Shadow elevation - hover state (elevated) */
+  --shadow-elevation-hover: 0 4px 12px oklch(0 0 0 / 0.3);
+  
+  /* Border contrast states */
+  --border-contrast-rest: var(--color-layer-border);
+  --border-contrast-hover: oklch(0.20 0 0);
+  --border-contrast-focus: var(--color-accent-base);
+  --border-contrast-active: var(--color-accent-active);
+
+
+  /* ============================================
+     MOTION CONSTANTS
+     ============================================
+     Intent: Standardized motion values for consistency.
+     Motion is reserved for state transitions and feedback,
+     not decorative animations. Stillness is the default. */
+  
+  /* Duration values */
+  --motion-duration-instant: 100ms;
+  --motion-duration-fast: 150ms;
+  --motion-duration-standard: 250ms;
+  --motion-duration-slow: 400ms;
+  
+  /* Easing values */
+  --motion-easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --motion-easing-decelerate: cubic-bezier(0, 0, 0.2, 1);
+  --motion-easing-accelerate: cubic-bezier(0.4, 0, 1, 1);
+  
+  /* Motion rules (documentation only - enforced in code):
+     - Allowed: State transitions (hover, focus, active)
+     - Allowed: Loading indicators
+     - Allowed: Modal/drawer entrances
+     - NOT allowed: Decorative animations
+     - NOT allowed: Auto-playing animations
+     - Motion must be triggered by user intent */
+
+
+  /* ============================================
+     SPACING RHYTHM
+     ============================================
+     Intent: Consistent vertical rhythm for sections and
+     internal component spacing. Creates breathable layouts
+     that feel premium and organized. */
+  
+  /* Section vertical spacing scale */
+  --spacing-section-xs: 3rem;      /* 48px - tight sections */
+  --spacing-section-sm: 4rem;       /* 64px - standard sections */
+  --spacing-section-md: 6rem;       /* 96px - prominent sections */
+  --spacing-section-lg: 8rem;       /* 128px - major sections */
+  --spacing-section-xl: 12rem;      /* 192px - hero sections */
+  
+  /* Internal component spacing scale */
+  --spacing-component-xs: 0.25rem;   /* 4px - tight internal */
+  --spacing-component-sm: 0.5rem;    /* 8px - standard internal */
+  --spacing-component-md: 1rem;      /* 16px - comfortable internal */
+  --spacing-component-lg: 1.5rem;    /* 24px - spacious internal */
+  --spacing-component-xl: 2rem;      /* 32px - generous internal */
+  --spacing-component-2xl: 3rem;     /* 48px - maximum internal */
+
+
+  /* ============================================
+     FONT FAMILIES
+     ============================================
+     Intent: Self-hosted fonts for headings (serif) and body (sans-serif).
+     System font stacks as fallbacks until font files are added. */
+
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ============================================
+   UTILITY CLASSES FOR PRIMITIVES
+   ============================================
+   Intent: Reusable utility classes that use tokens
+   for common patterns in primitives. */
+
+/* Container utilities */
+.container-base {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-component-lg);
+  padding-right: var(--spacing-component-lg);
+}
+
+/* Section background layers */
+.section-layer-base {
+  background-color: var(--color-layer-base);
+}
+
+.section-layer-section {
+  background-color: var(--color-layer-section);
+}
+
+.section-layer-elevated {
+  background-color: var(--color-layer-elevated);
+}
+
+/* Text color utilities */
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+/* Button base styles */
+.button-base,
+a.button-base {
+  display: inline-block;
+  background-color: transparent;
+  border: 1px solid var(--border-contrast-rest);
+  color: var(--color-text-primary);
+  padding: var(--spacing-component-sm) var(--spacing-component-md);
+  cursor: pointer;
+  text-decoration: none;
+  transition: 
+    border-color var(--motion-duration-standard) var(--motion-easing-standard),
+    box-shadow var(--motion-duration-standard) var(--motion-easing-standard);
+  outline: none;
+}
+
+.button-base:hover,
+a.button-base:hover {
+  border-color: var(--border-contrast-hover);
+  box-shadow: var(--glow-intensity-low);
+}
+
+.button-base:focus-visible,
+a.button-base:focus-visible {
+  border-color: var(--border-contrast-focus);
+  box-shadow: var(--glow-intensity-medium);
+}
+
+.button-base:active,
+a.button-base:active {
+  border-color: var(--border-contrast-active);
+}
+
+/* Divider utilities */
+.divider-base {
+  border: none;
+  border-top: 1px solid var(--color-layer-border);
+  width: 100%;
+}
+
+.divider-accent {
+  border: none;
+  border-top: 1px solid var(--color-accent-base);
+  width: 100%;
+}
+
+/* Link utilities */
+.link-base {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--motion-duration-standard) var(--motion-easing-standard);
+}
+
+.link-base:hover {
+  color: var(--color-text-primary);
+}
+
+/* Ecosystem card utilities */
+.ecosystem-card {
+  padding: var(--spacing-component-lg);
+  border: 1px solid var(--color-layer-border);
+  background-color: var(--color-layer-elevated);
+  transition: 
+    border-color var(--motion-duration-standard) var(--motion-easing-standard),
+    box-shadow var(--motion-duration-standard) var(--motion-easing-standard);
+  outline: none;
+}
+
+.ecosystem-card:hover {
+  border-color: var(--border-contrast-hover);
+  box-shadow: var(--shadow-elevation-hover);
+}
+
+.ecosystem-card:focus-visible {
+  border-color: var(--border-contrast-focus);
+  box-shadow: var(--shadow-elevation-hover);
+}
+
