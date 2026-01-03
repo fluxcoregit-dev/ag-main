@@ -19,7 +19,7 @@ export const metadata: Metadata = {
  */
 export default function About() {
   return (
-    <Section spacing="xl" layer="section">
+    <Section spacing="md" layer="section">
       <Container>
         <div
           style={{
@@ -32,7 +32,7 @@ export default function About() {
             marginRight: 'auto',
           }}
         >
-          <div style={{ marginBottom: '6rem' }}>
+          <div style={{ marginBottom: '3rem' }}>
             <Heading level="h1">
               About Axiom Group
             </Heading>

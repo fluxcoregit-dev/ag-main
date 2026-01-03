@@ -18,7 +18,7 @@ export const metadata: Metadata = {
  */
 export default function Ecosystem() {
   return (
-    <Section spacing="xl" layer="section">
+    <Section spacing="md" layer="section">
       <Container>
         <div
           style={{
@@ -38,7 +38,7 @@ export default function Ecosystem() {
               alignItems: 'flex-start',
               gap: 0,
               width: '100%',
-              marginBottom: '6rem',
+              marginBottom: '3rem',
             }}
           >
             <Heading level="h1">

@@ -11,7 +11,7 @@ import { tokens } from '@/lib/tokens';
 export default function NotFound() {
   return (
     <>
-      <Section spacing="xl" layer="base">
+      <Section spacing="md" layer="base">
         <Container>
           <div
             style={{

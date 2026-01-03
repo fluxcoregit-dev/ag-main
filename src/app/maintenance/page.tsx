@@ -10,7 +10,7 @@ import { tokens } from '@/lib/tokens';
 export default function Maintenance() {
   return (
     <>
-      <Section spacing="xl" layer="base">
+      <Section spacing="md" layer="base">
         <Container>
           <div
             style={{

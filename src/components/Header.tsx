@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Container, Text } from './primitives';
 import { tokens } from '@/lib/tokens';
 
@@ -18,21 +18,27 @@ import { tokens } from '@/lib/tokens';
 export function Header() {
   const pathname = usePathname();
   const [mounted, setMounted] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     setMounted(true);
-  }, []);
+    // Update marginBottom after mount to avoid hydration mismatch
+    if (headerRef.current && pathname === '/') {
+      headerRef.current.style.marginBottom = tokens.spacing.section.md;
+    }
+  }, [pathname]);
 
   // Use pathname only after mount to avoid hydration mismatch
   const currentPath = mounted ? pathname : null;
 
   return (
     <header
+      ref={headerRef}
       style={{
         backgroundColor: 'transparent',
         paddingTop: tokens.spacing.section.sm,
         paddingBottom: tokens.spacing.section.sm,
-        marginBottom: tokens.spacing.section.md,
+        marginBottom: 0, // Updated via useEffect after mount to avoid hydration mismatch
       }}
     >
       <Container>

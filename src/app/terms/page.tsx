@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Terms() {
   return (
-    <Section spacing="xl" layer="section">
+    <Section spacing="md" layer="section">
       <Container>
         <div
           style={{
@@ -25,7 +25,7 @@ export default function Terms() {
             marginRight: 'auto',
           }}
         >
-          <div style={{ marginBottom: '6rem' }}>
+          <div style={{ marginBottom: '3rem' }}>
             <Heading level="h1">
               Terms of Use
             </Heading>

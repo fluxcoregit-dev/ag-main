@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Disclosures() {
   return (
     <>
-      <Section spacing="xl" layer="base">
+      <Section spacing="md" layer="base">
         <Container>
           <div
             style={{
