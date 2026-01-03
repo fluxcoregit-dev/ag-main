@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Section, Container, Heading, Text } from '@/components/primitives';
 import { tokens } from '@/lib/tokens';
 
@@ -18,7 +19,7 @@ export function Hero() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
-            gap: tokens.spacing.component.xl,
+            gap: 0,
             maxWidth: '800px',
           }}
         >
@@ -32,6 +33,7 @@ export function Hero() {
               flexDirection: 'column',
               gap: tokens.spacing.component.md,
               maxWidth: '600px',
+              marginTop: '4rem',
             }}
           >
             <Text variant="body" color="secondary">
@@ -46,14 +48,15 @@ export function Hero() {
               flexDirection: 'row',
               gap: tokens.spacing.component.md,
               flexWrap: 'wrap',
+              marginTop: tokens.spacing.component.xl,
             }}
           >
-            <a href="/ecosystem" className="button-base">
+            <Link href="/ecosystem" className="button-base">
               Explore the Ecosystem
-            </a>
-            <a href="/philosophy" className="button-base">
-              Our Philosophy
-            </a>
+            </Link>
+            <Link href="/about" className="button-base">
+              About Axiom Group
+            </Link>
           </div>
         </div>
       </Container>

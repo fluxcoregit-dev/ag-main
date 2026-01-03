@@ -4,7 +4,7 @@ import { tokens } from '@/lib/tokens';
 
 export const metadata: Metadata = {
   title: 'Ecosystem | Axiom Group',
-  description: 'Axiom Group\'s ecosystem is built on five foundational domains: Product & Platform Engineering, AI & Intelligent Systems, Design Systems & Brand Architecture, Growth Infrastructure & Analytics, and Security, Reliability & Compliance.',
+  description: 'The domains and capability pillars that form the Axiom Group ecosystem.',
   alternates: {
     canonical: '/ecosystem',
   },

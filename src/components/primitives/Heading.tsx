@@ -18,12 +18,13 @@ interface HeadingProps {
 
 const headingStyles: Record<HeadingLevel, React.CSSProperties> = {
   h1: {
-    fontSize: '3rem',
+    fontSize: '3.75rem',
     fontWeight: 600,
     lineHeight: 1.2,
-    letterSpacing: '-0.02em',
+    letterSpacing: '-0.04em',
     color: tokens.textColors.primary,
     fontFamily: 'var(--font-serif)',
+    marginBottom: '3rem',
   },
   h2: {
     fontSize: '2.25rem',

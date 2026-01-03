@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Container, Text } from './primitives';
 import { tokens } from '@/lib/tokens';
 
@@ -27,7 +28,7 @@ export function Header() {
           }}
         >
           <div>
-            <a
+            <Link
               href="/"
               style={{
                 textDecoration: 'none',
@@ -47,7 +48,7 @@ export function Header() {
               >
                 Axiom Group
               </Text>
-            </a>
+            </Link>
           </div>
           <div
             style={{
@@ -56,16 +57,21 @@ export function Header() {
               alignItems: 'center',
             }}
           >
-            <a href="/ecosystem" className="link-base" aria-label="View ecosystem">
+            <Link href="/about" className="link-base" aria-label="View about">
+              <Text as="span" variant="body" color="secondary">
+                About
+              </Text>
+            </Link>
+            <Link href="/ecosystem" className="link-base" aria-label="View ecosystem">
               <Text as="span" variant="body" color="secondary">
                 Ecosystem
               </Text>
-            </a>
-            <a href="/philosophy" className="link-base" aria-label="View philosophy">
+            </Link>
+            <Link href="/contact" className="link-base" aria-label="View contact">
               <Text as="span" variant="body" color="secondary">
-                Philosophy
+                Contact
               </Text>
-            </a>
+            </Link>
           </div>
         </nav>
       </Container>

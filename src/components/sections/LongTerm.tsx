@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Section, Container, Heading, Text } from '@/components/primitives';
 import { tokens } from '@/lib/tokens';
 
@@ -70,9 +71,9 @@ export function LongTerm() {
             </Text>
 
             <div style={{ marginTop: tokens.spacing.component.sm }}>
-              <a href="/contact" className="button-base">
+              <Link href="/contact" className="button-base">
                 Start a Conversation
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,23 +1,17 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { Section, Container, Heading, Text } from '@/components/primitives';
 import { tokens } from '@/lib/tokens';
 
 export const metadata: Metadata = {
-  title: 'About | Axiom Group',
-  description: 'Mandate, principles, and long-term orientation of Axiom Group.',
+  title: 'Legal | Axiom Group',
+  description: 'Legal and institutional information for Axiom Group.',
   alternates: {
-    canonical: '/about',
+    canonical: '/legal',
   },
 };
 
-/**
- * About Page
- * 
- * Intent: Explain Axiom Group as an institutional, long-term technology
- * and AI holding company. Focus on mandate, principles, and time horizon.
- * No founder story, timeline, or achievements.
- */
-export default function About() {
+export default function Legal() {
   return (
     <>
       <Section spacing="xl" layer="base">
@@ -32,7 +26,7 @@ export default function About() {
             }}
           >
             <Heading level="h1">
-              About Axiom Group
+              Legal & Institutional Information
             </Heading>
           </div>
         </Container>
@@ -50,7 +44,7 @@ export default function About() {
             }}
           >
             <Heading level="h2">
-              Mandate
+              Entity Overview
             </Heading>
 
             <div
@@ -61,17 +55,14 @@ export default function About() {
               }}
             >
               <Text variant="body" color="primary">
-                Axiom Group is a parent technology and AI holding company established
-                to build and support enduring systems. Our mandate is to create the
-                foundational infrastructure—technical, organizational, and strategic—that
-                enables long-term value creation across a portfolio of ventures.
+                Axiom Group is a parent technology and AI holding entity.
               </Text>
 
               <Text variant="body" color="secondary">
-                We operate with a multi-year time horizon, prioritizing systems that
-                improve over time rather than solutions that require constant replacement.
-                Our focus is on establishing patterns, standards, and principles that
-                compound in value rather than delivering one-off implementations.
+                It exists to establish, govern, and steward independent ventures
+                operating under shared long-term principles and structural standards.
+                Axiom Group does not offer consumer products or services directly
+                through this website.
               </Text>
             </div>
           </div>
@@ -90,7 +81,7 @@ export default function About() {
             }}
           >
             <Heading level="h2">
-              Principles
+              Governing Documents
             </Heading>
 
             <div
@@ -101,17 +92,34 @@ export default function About() {
               }}
             >
               <Text variant="body" color="primary">
-                Axiom Group operates under a set of core principles that guide all
-                decisions: systems over features, architecture over implementation,
-                long-term clarity over short-term optimization, and coherence over speed.
+                The following documents govern the use of this website
+                and outline Axiom Group's legal and institutional posture:
               </Text>
 
-              <Text variant="body" color="secondary">
-                These principles are not aspirational statements but operational
-                constraints. They determine what we build, how we build it, and what
-                we choose not to build. They ensure that every decision contributes
-                to the long-term health and capability of the ecosystem.
-              </Text>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: tokens.spacing.component.sm,
+                  marginTop: tokens.spacing.component.sm,
+                }}
+              >
+                <Link href="/privacy" className="link-base">
+                  <Text as="span" variant="body" color="secondary">
+                    Privacy Policy
+                  </Text>
+                </Link>
+                <Link href="/terms" className="link-base">
+                  <Text as="span" variant="body" color="secondary">
+                    Terms of Use
+                  </Text>
+                </Link>
+                <Link href="/disclosures" className="link-base">
+                  <Text as="span" variant="body" color="secondary">
+                    Disclosures
+                  </Text>
+                </Link>
+              </div>
             </div>
           </div>
         </Container>
@@ -129,7 +137,7 @@ export default function About() {
             }}
           >
             <Heading level="h2">
-              Time Horizon
+              Scope
             </Heading>
 
             <div
@@ -140,18 +148,9 @@ export default function About() {
               }}
             >
               <Text variant="body" color="primary">
-                Axiom Group is structured for permanence. We make decisions with
-                multi-year and multi-decade consequences in mind. This time horizon
-                influences everything from technical architecture to organizational
-                design to strategic partnerships.
-              </Text>
-
-              <Text variant="body" color="secondary">
-                This long-term orientation means we resist the pressure to optimize
-                for immediate outcomes when those optimizations compromise future
-                capability. We build systems that can evolve, adapt, and improve
-                over extended periods, recognizing that the most valuable work
-                compounds slowly.
+                These documents apply only to the Axiom Group website and communications.
+                Individual ventures operating under Axiom Group maintain their own
+                legal and operational documentation.
               </Text>
             </div>
           </div>

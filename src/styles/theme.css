@@ -140,11 +140,11 @@
      that feel premium and organized. */
   
   /* Section vertical spacing scale */
-  --spacing-section-xs: 3rem;      /* 48px - tight sections */
-  --spacing-section-sm: 4rem;       /* 64px - standard sections */
-  --spacing-section-md: 6rem;       /* 96px - prominent sections */
-  --spacing-section-lg: 8rem;       /* 128px - major sections */
-  --spacing-section-xl: 12rem;      /* 192px - hero sections */
+  --spacing-section-xs: 4rem;      /* 64px - tight sections */
+  --spacing-section-sm: 5.5rem;    /* 88px - standard sections */
+  --spacing-section-md: 8rem;      /* 128px - prominent sections */
+  --spacing-section-lg: 11rem;     /* 176px - major sections */
+  --spacing-section-xl: 18rem;     /* 288px - hero sections */
   
   /* Internal component spacing scale */
   --spacing-component-xs: 0.25rem;   /* 4px - tight internal */

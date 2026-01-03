@@ -4,7 +4,7 @@ import { tokens } from '@/lib/tokens';
 
 export const metadata: Metadata = {
   title: 'Contact | Axiom Group',
-  description: 'Contact Axiom Group for inquiries about our ecosystem or potential collaboration.',
+  description: 'Contact information for inquiries related to Axiom Group.',
   alternates: {
     canonical: '/contact',
   },
