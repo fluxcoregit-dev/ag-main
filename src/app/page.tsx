@@ -21,9 +21,11 @@ export default function Home() {
               maxWidth: '800px',
             }}
           >
-            <Heading level="h2">
-              Axiom Group builds systems intended to outlast their creators.
-            </Heading>
+            <div style={{ marginTop: '4rem' }}>
+              <Heading level="h2">
+                Axiom Group builds systems intended to outlast their creators.
+              </Heading>
+            </div>
           </div>
         </Container>
       </Section>

@@ -5,9 +5,9 @@ import { tokens } from '@/lib/tokens';
 /**
  * Footer Component
  * 
- * Intent: Minimal and quiet footer with copyright notice
- * and optional long-term thinking line. No social links,
- * no marketing language. Uses primitives only.
+ * Intent: System closure with institutional finality. Minimal copy,
+ * increased vertical breathing room. Footer feels final, not informational.
+ * No social links, no marketing language. Uses primitives only.
  */
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,18 +16,19 @@ export function Footer() {
     <footer
       style={{
         backgroundColor: 'transparent',
-        paddingTop: tokens.spacing.section.md,
-        paddingBottom: tokens.spacing.component.lg,
+        paddingTop: tokens.spacing.section.lg,
+        paddingBottom: tokens.spacing.section.lg,
+        marginTop: tokens.spacing.section.xl,
       }}
     >
       <Container>
         <Divider />
         <div
           style={{
-            marginTop: tokens.spacing.component.lg,
+            marginTop: tokens.spacing.component.xl,
             display: 'flex',
             flexDirection: 'column',
-            gap: tokens.spacing.component.sm,
+            gap: tokens.spacing.component.md,
           }}
         >
           <Text variant="meta" color="muted">
@@ -40,22 +41,22 @@ export function Footer() {
             style={{
               display: 'flex',
               flexDirection: 'row',
-              gap: tokens.spacing.component.md,
+              gap: tokens.spacing.component.lg,
               flexWrap: 'wrap',
-              marginTop: tokens.spacing.component.xs,
+              marginTop: tokens.spacing.component.sm,
             }}
           >
-            <Link href="/privacy" className="link-base">
+            <Link href="/privacy" className="link-base" style={{ textDecoration: 'none' }}>
               <Text as="span" variant="meta" color="muted">
                 Privacy
               </Text>
             </Link>
-            <Link href="/terms" className="link-base">
+            <Link href="/terms" className="link-base" style={{ textDecoration: 'none' }}>
               <Text as="span" variant="meta" color="muted">
                 Terms
               </Text>
             </Link>
-            <Link href="/legal" className="link-base">
+            <Link href="/legal" className="link-base" style={{ textDecoration: 'none' }}>
               <Text as="span" variant="meta" color="muted">
                 Legal
               </Text>

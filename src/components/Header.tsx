@@ -1,21 +1,38 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import { Container, Text } from './primitives';
 import { tokens } from '@/lib/tokens';
 
 /**
  * Header Component
  * 
- * Intent: Minimal, non-promotional header containing wordmark
- * and neutral navigation. No call-to-action, no sticky behavior,
- * no animation. Uses primitives only.
+ * Intent: Institutional boundary with authoritative navigation hierarchy.
+ * Primary links (About, Ecosystem) appear neutral and authoritative.
+ * Secondary links (Contact) appear slightly muted and subordinate.
+ * Current page is subtly acknowledged through tone, not decoration.
+ * Uses spacing for vertical presence, not height.
  */
 export function Header() {
+  const pathname = usePathname();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Use pathname only after mount to avoid hydration mismatch
+  const currentPath = mounted ? pathname : null;
+
   return (
     <header
       style={{
         backgroundColor: 'transparent',
-        paddingTop: tokens.spacing.component.lg,
-        paddingBottom: tokens.spacing.component.lg,
+        paddingTop: tokens.spacing.section.sm,
+        paddingBottom: tokens.spacing.section.sm,
+        marginBottom: tokens.spacing.section.md,
       }}
     >
       <Container>
@@ -53,22 +70,112 @@ export function Header() {
           <div
             style={{
               display: 'flex',
-              gap: tokens.spacing.component.lg,
+              gap: tokens.spacing.component.xl,
               alignItems: 'center',
             }}
           >
-            <Link href="/about" className="link-base" aria-label="View about">
-              <Text as="span" variant="body" color="secondary">
+            <Link 
+              href="/about" 
+              className="link-base" 
+              aria-label="View about"
+              style={{ textDecoration: 'none' }}
+              onMouseEnter={(e) => {
+                if (currentPath !== '/about') {
+                  const textElement = e.currentTarget.querySelector('span');
+                  if (textElement) {
+                    textElement.style.color = tokens.textColors.primary;
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (currentPath !== '/about') {
+                  const textElement = e.currentTarget.querySelector('span');
+                  if (textElement) {
+                    textElement.style.color = tokens.textColors.secondary;
+                  }
+                }
+              }}
+            >
+              <Text 
+                as="span" 
+                variant="body" 
+                style={{
+                  color: currentPath === '/about' 
+                    ? tokens.textColors.primary 
+                    : tokens.textColors.secondary,
+                  transition: 'color var(--motion-duration-standard) var(--motion-easing-standard)',
+                }}
+              >
                 About
               </Text>
             </Link>
-            <Link href="/ecosystem" className="link-base" aria-label="View ecosystem">
-              <Text as="span" variant="body" color="secondary">
+            <Link 
+              href="/ecosystem" 
+              className="link-base" 
+              aria-label="View ecosystem"
+              style={{ textDecoration: 'none' }}
+              onMouseEnter={(e) => {
+                if (currentPath !== '/ecosystem') {
+                  const textElement = e.currentTarget.querySelector('span');
+                  if (textElement) {
+                    textElement.style.color = tokens.textColors.primary;
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (currentPath !== '/ecosystem') {
+                  const textElement = e.currentTarget.querySelector('span');
+                  if (textElement) {
+                    textElement.style.color = tokens.textColors.secondary;
+                  }
+                }
+              }}
+            >
+              <Text 
+                as="span" 
+                variant="body" 
+                style={{
+                  color: currentPath === '/ecosystem' 
+                    ? tokens.textColors.primary 
+                    : tokens.textColors.secondary,
+                  transition: 'color var(--motion-duration-standard) var(--motion-easing-standard)',
+                }}
+              >
                 Ecosystem
               </Text>
             </Link>
-            <Link href="/contact" className="link-base" aria-label="View contact">
-              <Text as="span" variant="body" color="secondary">
+            <Link 
+              href="/contact" 
+              className="link-base" 
+              aria-label="View contact"
+              style={{ textDecoration: 'none' }}
+              onMouseEnter={(e) => {
+                if (currentPath !== '/contact') {
+                  const textElement = e.currentTarget.querySelector('span');
+                  if (textElement) {
+                    textElement.style.color = tokens.textColors.secondary;
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (currentPath !== '/contact') {
+                  const textElement = e.currentTarget.querySelector('span');
+                  if (textElement) {
+                    textElement.style.color = tokens.textColors.muted;
+                  }
+                }
+              }}
+            >
+              <Text 
+                as="span" 
+                variant="body" 
+                style={{
+                  color: currentPath === '/contact' 
+                    ? tokens.textColors.secondary 
+                    : tokens.textColors.muted,
+                  transition: 'color var(--motion-duration-standard) var(--motion-easing-standard)',
+                }}
+              >
                 Contact
               </Text>
             </Link>

@@ -29,14 +29,14 @@ export function Process() {
   ];
 
   return (
-    <Section spacing="lg" layer="base">
+    <Section spacing="lg" layer="section">
       <Container>
         <div
           style={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
-            gap: tokens.spacing.component.xl,
+            gap: 0,
             maxWidth: '1200px',
           }}
         >
@@ -44,13 +44,16 @@ export function Process() {
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: tokens.spacing.component.md,
+              gap: 0,
               maxWidth: '800px',
+              marginBottom: '4rem',
             }}
           >
-            <Heading level="h2">
-              How We Build
-            </Heading>
+            <div style={{ marginTop: '4rem', marginBottom: '2rem' }}>
+              <Heading level="h2">
+                How We Build
+              </Heading>
+            </div>
             <Text variant="body" color="secondary">
               Axiom Group operates under a governing framework of four modes of thinking that guide decisions across all ventures and systems. These modes may occur simultaneously or repeatedly; they are principles, not steps.
             </Text>
@@ -70,16 +73,18 @@ export function Process() {
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: tokens.spacing.component.md,
+                  gap: 0,
                   padding: tokens.spacing.component.lg,
                   border: `1px solid ${tokens.colorLayers.border}`,
                   backgroundColor: tokens.colorLayers.elevated,
                 }}
                 aria-label={`${item.title} - ${item.description.substring(0, 100)}`}
               >
-                <Heading level="h3">
-                  {item.title}
-                </Heading>
+                <div style={{ marginBottom: '1rem' }}>
+                  <Heading level="h3">
+                    {item.title}
+                  </Heading>
+                </div>
                 <Text variant="body" color="secondary">
                   {item.description}
                 </Text>

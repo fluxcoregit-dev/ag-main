@@ -23,17 +23,18 @@ export function Hero() {
             maxWidth: '800px',
           }}
         >
-          <Heading level="h1">
-            Building intelligent systems, products, and brands from first principles.
-          </Heading>
+          <div style={{ marginBottom: '6rem' }}>
+            <Heading level="h1">
+              Building intelligent systems, products, and brands from first principles.
+            </Heading>
+          </div>
           
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: tokens.spacing.component.md,
+              gap: 0,
               maxWidth: '600px',
-              marginTop: '4rem',
             }}
           >
             <Text variant="body" color="secondary">
@@ -48,7 +49,7 @@ export function Hero() {
               flexDirection: 'row',
               gap: tokens.spacing.component.md,
               flexWrap: 'wrap',
-              marginTop: tokens.spacing.component.xl,
+              marginTop: '4rem',
             }}
           >
             <Link href="/ecosystem" className="button-base">

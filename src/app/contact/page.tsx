@@ -18,16 +18,26 @@ export const metadata: Metadata = {
  */
 export default function Contact() {
   return (
-    <>
-      <Section spacing="xl" layer="base">
-        <Container>
+    <Section spacing="xl" layer="section">
+      <Container>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            gap: tokens.spacing.section.lg,
+            maxWidth: '800px',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          }}
+        >
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
               gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
+              width: '100%',
             }}
           >
             <Heading level="h1">
@@ -39,18 +49,14 @@ export default function Contact() {
               collaboration, please reach out through the form below or via email.
             </Text>
           </div>
-        </Container>
-      </Section>
 
-      <Section spacing="lg" layer="base">
-        <Container>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
               gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
+              width: '100%',
             }}
           >
             <form
@@ -186,18 +192,18 @@ export default function Contact() {
               <Text variant="body" color="muted">
                 Alternatively, you can reach us directly at{' '}
                 <a
-                  href="mailto:contact@axiomgroup.com"
+                  href="mailto:contact@axiomgroup.services"
                   className="link-base"
                   style={{ color: tokens.textColors.secondary }}
                 >
-                  contact@axiomgroup.com
+                  contact@axiomgroup.services
                 </a>
               </Text>
             </div>
           </div>
-        </Container>
-      </Section>
-    </>
+        </div>
+      </Container>
+    </Section>
   );
 }
 

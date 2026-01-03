@@ -18,52 +18,63 @@ export const metadata: Metadata = {
  */
 export default function Ecosystem() {
   return (
-    <>
-      <Section spacing="xl" layer="base">
-        <Container>
+    <Section spacing="xl" layer="section">
+      <Container>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            gap: 0,
+            maxWidth: '800px',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          }}
+        >
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
-              gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
+              gap: 0,
+              width: '100%',
+              marginBottom: '6rem',
             }}
           >
             <Heading level="h1">
               Ecosystem
             </Heading>
 
-            <Text variant="body" color="secondary">
-              Axiom Group's ecosystem is built on five foundational domains, each
-              representing a long-term commitment to systemic excellence rather than
-              short-term execution. These pillars are enduring capability areas that
-              support all ventures within the portfolio.
-            </Text>
+            <div style={{ marginTop: '2rem' }}>
+              <Text variant="body" color="secondary">
+                Axiom Group's ecosystem is built on five foundational domains, each
+                representing a long-term commitment to systemic excellence rather than
+                short-term execution. These pillars are enduring capability areas that
+                support all ventures within the portfolio.
+              </Text>
+            </div>
           </div>
-        </Container>
-      </Section>
 
-      <Section spacing="lg" layer="base">
-        <Container>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
-              gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
+              gap: 0,
+              width: '100%',
             }}
           >
-            <Heading level="h2">
-              Product & Platform Engineering
-            </Heading>
+            <div style={{ marginBottom: '3rem' }}>
+              <Heading level="h2">
+                Product & Platform Engineering
+              </Heading>
+            </div>
 
             <div
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: tokens.spacing.component.md,
+                gap: 0,
               }}
             >
               <Text variant="body" color="primary">
@@ -72,7 +83,16 @@ export default function Ecosystem() {
                 Our focus is on systems that outlast individual implementations and
                 provide a stable base for continuous evolution.
               </Text>
+            </div>
 
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.75rem',
+                marginTop: '2.5rem',
+              }}
+            >
               <Text variant="body" color="secondary">
                 This domain encompasses platform architecture, development standards,
                 code quality frameworks, and the technical infrastructure that allows
@@ -89,29 +109,28 @@ export default function Ecosystem() {
               </Text>
             </div>
           </div>
-        </Container>
-      </Section>
 
-      <Section spacing="lg" layer="base">
-        <Container>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
-              gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
+              gap: 0,
+              width: '100%',
+              marginTop: '5rem',
             }}
           >
-            <Heading level="h2">
-              AI & Intelligent Systems
-            </Heading>
+            <div style={{ marginBottom: '3rem' }}>
+              <Heading level="h2">
+                AI & Intelligent Systems
+              </Heading>
+            </div>
 
             <div
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: tokens.spacing.component.md,
+                gap: 0,
               }}
             >
               <Text variant="body" color="primary">
@@ -120,7 +139,16 @@ export default function Ecosystem() {
                 encompasses both the technical infrastructure and the principles for
                 responsible AI development.
               </Text>
+            </div>
 
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.75rem',
+                marginTop: '2.5rem',
+              }}
+            >
               <Text variant="body" color="secondary">
                 Intelligence at Axiom Group is treated as infrastructure, embedded
                 within systems rather than added as a feature. We build the foundational
@@ -136,29 +164,28 @@ export default function Ecosystem() {
               </Text>
             </div>
           </div>
-        </Container>
-      </Section>
 
-      <Section spacing="lg" layer="base">
-        <Container>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
-              gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
+              gap: 0,
+              width: '100%',
+              marginTop: '5rem',
             }}
           >
-            <Heading level="h2">
-              Design Systems & Brand Architecture
-            </Heading>
+            <div style={{ marginBottom: '3rem' }}>
+              <Heading level="h2">
+                Design Systems & Brand Architecture
+              </Heading>
+            </div>
 
             <div
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: tokens.spacing.component.md,
+                gap: 0,
               }}
             >
               <Text variant="body" color="primary">
@@ -167,7 +194,16 @@ export default function Ecosystem() {
                 and the architectural thinking that makes consistent expression possible
                 at scale.
               </Text>
+            </div>
 
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.75rem',
+                marginTop: '2.5rem',
+              }}
+            >
               <Text variant="body" color="secondary">
                 Design at Axiom Group is not about aesthetics but about establishing
                 the patterns and principles that allow multiple products and brands
@@ -184,29 +220,28 @@ export default function Ecosystem() {
               </Text>
             </div>
           </div>
-        </Container>
-      </Section>
 
-      <Section spacing="lg" layer="base">
-        <Container>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
-              gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
+              gap: 0,
+              width: '100%',
+              marginTop: '5rem',
             }}
           >
-            <Heading level="h2">
-              Growth Infrastructure & Analytics
-            </Heading>
+            <div style={{ marginBottom: '3rem' }}>
+              <Heading level="h2">
+                Growth Infrastructure & Analytics
+              </Heading>
+            </div>
 
             <div
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: tokens.spacing.component.md,
+                gap: 0,
               }}
             >
               <Text variant="body" color="primary">
@@ -215,7 +250,16 @@ export default function Ecosystem() {
                 long-term value. The focus is on infrastructure that supports
                 sustainable growth.
               </Text>
+            </div>
 
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.75rem',
+                marginTop: '2.5rem',
+              }}
+            >
               <Text variant="body" color="secondary">
                 Analytics at Axiom Group is about establishing the measurement
                 frameworks and data infrastructure that allow ventures to understand
@@ -232,29 +276,28 @@ export default function Ecosystem() {
               </Text>
             </div>
           </div>
-        </Container>
-      </Section>
 
-      <Section spacing="lg" layer="base">
-        <Container>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
-              gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
+              gap: 0,
+              width: '100%',
+              marginTop: '5rem',
             }}
           >
-            <Heading level="h2">
-              Security, Reliability & Compliance
-            </Heading>
+            <div style={{ marginBottom: '3rem' }}>
+              <Heading level="h2">
+                Security, Reliability & Compliance
+              </Heading>
+            </div>
 
             <div
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: tokens.spacing.component.md,
+                gap: 0,
               }}
             >
               <Text variant="body" color="primary">
@@ -263,7 +306,16 @@ export default function Ecosystem() {
                 This domain ensures that foundational concerns are addressed
                 systematically, not reactively.
               </Text>
+            </div>
 
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.75rem',
+                marginTop: '2.5rem',
+              }}
+            >
               <Text variant="body" color="secondary">
                 Security and reliability at Axiom Group are not afterthoughts but
                 foundational concerns built into every system from the start. We
@@ -279,9 +331,9 @@ export default function Ecosystem() {
               </Text>
             </div>
           </div>
-        </Container>
-      </Section>
-    </>
+        </div>
+      </Container>
+    </Section>
   );
 }
 

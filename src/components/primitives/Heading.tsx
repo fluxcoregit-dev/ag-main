@@ -24,7 +24,6 @@ const headingStyles: Record<HeadingLevel, React.CSSProperties> = {
     letterSpacing: '-0.04em',
     color: tokens.textColors.primary,
     fontFamily: 'var(--font-serif)',
-    marginBottom: '3rem',
   },
   h2: {
     fontSize: '2.25rem',
@@ -35,7 +34,7 @@ const headingStyles: Record<HeadingLevel, React.CSSProperties> = {
     fontFamily: 'var(--font-serif)',
   },
   h3: {
-    fontSize: '1.75rem',
+    fontSize: '1.5rem',
     fontWeight: 500,
     lineHeight: 1.4,
     letterSpacing: '0',

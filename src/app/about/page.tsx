@@ -19,45 +19,45 @@ export const metadata: Metadata = {
  */
 export default function About() {
   return (
-    <>
-      <Section spacing="xl" layer="base">
-        <Container>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-              gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
-            }}
-          >
+    <Section spacing="xl" layer="section">
+      <Container>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            gap: 0,
+            maxWidth: '800px',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          }}
+        >
+          <div style={{ marginBottom: '6rem' }}>
             <Heading level="h1">
               About Axiom Group
             </Heading>
           </div>
-        </Container>
-      </Section>
 
-      <Section spacing="lg" layer="base">
-        <Container>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
-              gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
+              gap: 0,
+              width: '100%',
             }}
           >
-            <Heading level="h2">
-              Mandate
-            </Heading>
+            <div style={{ marginBottom: '3rem' }}>
+              <Heading level="h2">
+                Mandate
+              </Heading>
+            </div>
 
             <div
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: tokens.spacing.component.md,
+                gap: 0,
               }}
             >
               <Text variant="body" color="primary">
@@ -66,7 +66,13 @@ export default function About() {
                 foundational infrastructure—technical, organizational, and strategic—that
                 enables long-term value creation across a portfolio of ventures.
               </Text>
+            </div>
 
+            <div
+              style={{
+                marginTop: '2.5rem',
+              }}
+            >
               <Text variant="body" color="secondary">
                 We operate with a multi-year time horizon, prioritizing systems that
                 improve over time rather than solutions that require constant replacement.
@@ -75,29 +81,28 @@ export default function About() {
               </Text>
             </div>
           </div>
-        </Container>
-      </Section>
 
-      <Section spacing="lg" layer="base">
-        <Container>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
-              gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
+              gap: 0,
+              width: '100%',
+              marginTop: '5rem',
             }}
           >
-            <Heading level="h2">
-              Principles
-            </Heading>
+            <div style={{ marginBottom: '3rem' }}>
+              <Heading level="h2">
+                Principles
+              </Heading>
+            </div>
 
             <div
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: tokens.spacing.component.md,
+                gap: 0,
               }}
             >
               <Text variant="body" color="primary">
@@ -105,7 +110,13 @@ export default function About() {
                 decisions: systems over features, architecture over implementation,
                 long-term clarity over short-term optimization, and coherence over speed.
               </Text>
+            </div>
 
+            <div
+              style={{
+                marginTop: '2.5rem',
+              }}
+            >
               <Text variant="body" color="secondary">
                 These principles are not aspirational statements but operational
                 constraints. They determine what we build, how we build it, and what
@@ -114,29 +125,28 @@ export default function About() {
               </Text>
             </div>
           </div>
-        </Container>
-      </Section>
 
-      <Section spacing="lg" layer="base">
-        <Container>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
-              gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
+              gap: 0,
+              width: '100%',
+              marginTop: '5rem',
             }}
           >
-            <Heading level="h2">
-              Time Horizon
-            </Heading>
+            <div style={{ marginBottom: '3rem' }}>
+              <Heading level="h2">
+                Time Horizon
+              </Heading>
+            </div>
 
             <div
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: tokens.spacing.component.md,
+                gap: 0,
               }}
             >
               <Text variant="body" color="primary">
@@ -145,7 +155,13 @@ export default function About() {
                 influences everything from technical architecture to organizational
                 design to strategic partnerships.
               </Text>
+            </div>
 
+            <div
+              style={{
+                marginTop: '2.5rem',
+              }}
+            >
               <Text variant="body" color="secondary">
                 This long-term orientation means we resist the pressure to optimize
                 for immediate outcomes when those optimizations compromise future
@@ -155,9 +171,9 @@ export default function About() {
               </Text>
             </div>
           </div>
-        </Container>
-      </Section>
-    </>
+        </div>
+      </Container>
+    </Section>
   );
 }
 

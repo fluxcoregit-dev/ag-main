@@ -33,14 +33,14 @@ export function Ecosystem() {
   ];
 
   return (
-    <Section spacing="lg" layer="base">
+    <Section spacing="lg" layer="section">
       <Container>
         <div
           style={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
-            gap: tokens.spacing.component.xl,
+            gap: 0,
             maxWidth: '1200px',
           }}
         >
@@ -48,13 +48,16 @@ export function Ecosystem() {
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: tokens.spacing.component.md,
+              gap: 0,
               maxWidth: '800px',
+              marginBottom: '4rem',
             }}
           >
-            <Heading level="h2">
-              Ecosystem Pillars
-            </Heading>
+            <div style={{ marginTop: '4rem', marginBottom: '2rem' }}>
+              <Heading level="h2">
+                Ecosystem Pillars
+              </Heading>
+            </div>
             <Text variant="body" color="secondary">
               Axiom Group's ecosystem is built on five foundational domains, each representing a long-term commitment to systemic excellence rather than short-term execution.
             </Text>
@@ -76,14 +79,16 @@ export function Ecosystem() {
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: tokens.spacing.component.md,
+                  gap: 0,
                 }}
                 tabIndex={0}
                 aria-label={`${pillar.title} - ${pillar.description.substring(0, 100)}`}
               >
-                <Heading level="h3">
-                  {pillar.title}
-                </Heading>
+                <div style={{ marginBottom: '1rem' }}>
+                  <Heading level="h3">
+                    {pillar.title}
+                  </Heading>
+                </div>
                 <Text variant="body" color="secondary">
                   {pillar.description}
                 </Text>

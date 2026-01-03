@@ -10,26 +10,28 @@ import { tokens } from '@/lib/tokens';
  */
 export function Role() {
   return (
-    <Section spacing="lg" layer="base">
+    <Section spacing="lg" layer="section">
       <Container>
         <div
           style={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
-            gap: tokens.spacing.component.lg,
+            gap: 0,
             maxWidth: '800px',
           }}
         >
-          <Heading level="h2">
-            The Role of Axiom Group
-          </Heading>
+          <div style={{ marginTop: '4rem', marginBottom: '3rem' }}>
+            <Heading level="h2">
+              The Role of Axiom Group
+            </Heading>
+          </div>
 
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: tokens.spacing.component.md,
+              gap: 0,
             }}
           >
             <Text variant="body" color="primary">
@@ -38,7 +40,16 @@ export function Role() {
               and long-term thinking that enables clarity, scale, and durability across
               the entire ecosystem.
             </Text>
+          </div>
 
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '0.75rem',
+              marginTop: '1.5rem',
+            }}
+          >
             <Text variant="body" color="secondary">
               While individual ventures build products and serve customers, Axiom Group
               establishes the foundational principles, technical standards, and

@@ -11,26 +11,28 @@ import { tokens } from '@/lib/tokens';
  */
 export function Intelligence() {
   return (
-    <Section spacing="lg" layer="base">
+    <Section spacing="lg" layer="section">
       <Container>
         <div
           style={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
-            gap: tokens.spacing.component.lg,
+            gap: 0,
             maxWidth: '800px',
           }}
         >
-          <Heading level="h2">
-            Intelligence as Infrastructure
-          </Heading>
+          <div style={{ marginTop: '4rem', marginBottom: '3rem' }}>
+            <Heading level="h2">
+              Intelligence as Infrastructure
+            </Heading>
+          </div>
 
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: tokens.spacing.component.md,
+              gap: 0,
             }}
           >
             <Text variant="body" color="primary">
@@ -40,7 +42,13 @@ export function Intelligence() {
               capabilities. Agentic behavior emerges from thoughtful system design,
               not from novelty or isolated implementations.
             </Text>
+          </div>
 
+          <div
+            style={{
+              marginTop: '2.5rem',
+            }}
+          >
             <Text variant="body" color="secondary">
               This infrastructure approach means that AI compounds over time rather
               than delivering one-off benefits. Each system built on this foundation
@@ -49,8 +57,6 @@ export function Intelligence() {
               else, operating quietly in the background rather than demanding attention.
             </Text>
           </div>
-
-          <Divider />
         </div>
       </Container>
     </Section>

@@ -5,8 +5,8 @@ import { tokens } from '@/lib/tokens';
  * Section Primitive
  * 
  * Intent: Wraps major vertical sections with consistent spacing
- * using section spacing tokens. Supports optional surface layer
- * backgrounds (base, section, elevated) for depth. No motion -
+ * using section spacing tokens. Requires explicit surface layer
+ * (base, section, elevated) for material hierarchy. No motion -
  * stillness by default.
  */
 type SectionLayer = 'base' | 'section' | 'elevated';
@@ -14,7 +14,7 @@ type SectionLayer = 'base' | 'section' | 'elevated';
 interface SectionProps {
   children: ReactNode;
   spacing?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
-  layer?: SectionLayer;
+  layer: SectionLayer;
   className?: string;
 }
 
@@ -25,9 +25,7 @@ export function Section({
   className = '',
 }: SectionProps) {
   const spacingValue = tokens.spacing.section[spacing];
-  const backgroundLayer = layer
-    ? tokens.colorLayers[layer]
-    : 'transparent';
+  const backgroundLayer = tokens.colorLayers[layer];
 
   return (
     <section

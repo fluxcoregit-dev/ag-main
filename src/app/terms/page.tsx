@@ -12,82 +12,75 @@ export const metadata: Metadata = {
 
 export default function Terms() {
   return (
-    <>
-      <Section spacing="xl" layer="base">
-        <Container>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-              gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
-            }}
-          >
+    <Section spacing="xl" layer="section">
+      <Container>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            gap: 0,
+            maxWidth: '800px',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          }}
+        >
+          <div style={{ marginBottom: '6rem' }}>
             <Heading level="h1">
               Terms of Use
             </Heading>
           </div>
-        </Container>
-      </Section>
 
-      <Section spacing="lg" layer="base">
-        <Container>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
-              gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
+              gap: 0,
+              width: '100%',
             }}
           >
-            <Heading level="h2">
-              Acceptance
-            </Heading>
-
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: tokens.spacing.component.md,
-              }}
-            >
-              <Text variant="body" color="primary">
-                By accessing this website, you agree to these terms of use.
-                If you do not agree, you must not use this website.
-              </Text>
+            <div style={{ marginBottom: '3rem' }}>
+              <Heading level="h2">
+                Acceptance
+              </Heading>
             </div>
-          </div>
-        </Container>
-      </Section>
 
-      <Section spacing="lg" layer="base">
-        <Container>
+            <Text variant="body" color="primary">
+              By accessing this website, you agree to these terms of use.
+              If you do not agree, you must not use this website.
+            </Text>
+          </div>
+
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
-              gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
+              gap: 0,
+              width: '100%',
+              marginTop: '5rem',
             }}
           >
-            <Heading level="h2">
-              Use of Website
-            </Heading>
+            <div style={{ marginBottom: '3rem' }}>
+              <Heading level="h2">
+                Use of Website
+              </Heading>
+            </div>
 
             <div
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: tokens.spacing.component.md,
+                gap: 0,
               }}
             >
               <Text variant="body" color="primary">
                 This website is provided for informational purposes only.
               </Text>
+            </div>
 
+            <div style={{ marginTop: '1.5rem' }}>
               <Text variant="body" color="secondary">
                 You may use this website to access information about Axiom Group
                 and its ecosystem. You must not use this website for any unlawful
@@ -95,29 +88,28 @@ export default function Terms() {
               </Text>
             </div>
           </div>
-        </Container>
-      </Section>
 
-      <Section spacing="lg" layer="base">
-        <Container>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
-              gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
+              gap: 0,
+              width: '100%',
+              marginTop: '5rem',
             }}
           >
-            <Heading level="h2">
-              Intellectual Property
-            </Heading>
+            <div style={{ marginBottom: '3rem' }}>
+              <Heading level="h2">
+                Intellectual Property
+              </Heading>
+            </div>
 
             <div
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: tokens.spacing.component.md,
+                gap: 0,
               }}
             >
               <Text variant="body" color="primary">
@@ -125,42 +117,45 @@ export default function Terms() {
                 other materials, is the property of Axiom Group or its licensors
                 and is protected by intellectual property laws.
               </Text>
+            </div>
 
+            <div style={{ marginTop: '1.5rem' }}>
               <Text variant="body" color="secondary">
                 You may not reproduce, distribute, or create derivative works from
                 this content without explicit written permission.
               </Text>
             </div>
           </div>
-        </Container>
-      </Section>
 
-      <Section spacing="lg" layer="base">
-        <Container>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
-              gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
+              gap: 0,
+              width: '100%',
+              marginTop: '5rem',
             }}
           >
-            <Heading level="h2">
-              No Services or Products
-            </Heading>
+            <div style={{ marginBottom: '3rem' }}>
+              <Heading level="h2">
+                No Services or Products
+              </Heading>
+            </div>
 
             <div
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: tokens.spacing.component.md,
+                gap: 0,
               }}
             >
               <Text variant="body" color="primary">
                 Axiom Group does not offer products or services through this website.
               </Text>
+            </div>
 
+            <div style={{ marginTop: '1.5rem' }}>
               <Text variant="body" color="secondary">
                 Nothing on this site constitutes an offer, solicitation, or agreement.
                 This website is informational only and does not create any contractual
@@ -168,35 +163,36 @@ export default function Terms() {
               </Text>
             </div>
           </div>
-        </Container>
-      </Section>
 
-      <Section spacing="lg" layer="base">
-        <Container>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
-              gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
+              gap: 0,
+              width: '100%',
+              marginTop: '5rem',
             }}
           >
-            <Heading level="h2">
-              Limitation of Liability
-            </Heading>
+            <div style={{ marginBottom: '3rem' }}>
+              <Heading level="h2">
+                Limitation of Liability
+              </Heading>
+            </div>
 
             <div
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: tokens.spacing.component.md,
+                gap: 0,
               }}
             >
               <Text variant="body" color="primary">
                 Axiom Group provides this website "as is" without warranties of any kind.
               </Text>
+            </div>
 
+            <div style={{ marginTop: '1.5rem' }}>
               <Text variant="body" color="secondary">
                 Axiom Group is not liable for any damages arising from your use of
                 this website, including but not limited to direct, indirect, incidental,
@@ -204,40 +200,30 @@ export default function Terms() {
               </Text>
             </div>
           </div>
-        </Container>
-      </Section>
 
-      <Section spacing="lg" layer="base">
-        <Container>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'flex-start',
-              gap: tokens.spacing.component.lg,
-              maxWidth: '800px',
+              gap: 0,
+              width: '100%',
+              marginTop: '5rem',
             }}
           >
-            <Heading level="h2">
-              Changes
-            </Heading>
-
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: tokens.spacing.component.md,
-              }}
-            >
-              <Text variant="body" color="primary">
-                Axiom Group may modify these terms at any time. Continued use of
-                this website after changes constitutes acceptance of the modified terms.
-              </Text>
+            <div style={{ marginBottom: '3rem' }}>
+              <Heading level="h2">
+                Changes
+              </Heading>
             </div>
+
+            <Text variant="body" color="primary">
+              Axiom Group may modify these terms at any time. Continued use of
+              this website after changes constitutes acceptance of the modified terms.
+            </Text>
           </div>
-        </Container>
-      </Section>
-    </>
+        </div>
+      </Container>
+    </Section>
   );
 }
-
