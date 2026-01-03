@@ -58,8 +58,8 @@ export default function Disclosures() {
               </Text>
 
               <Text variant="body" color="secondary">
-                It does not provide investment advice, financial services,
-                or regulated professional services through this website.
+                No investment advice, financial services, or regulated professional
+                services provided through this website.
               </Text>
             </div>
           </div>
@@ -90,12 +90,11 @@ export default function Disclosures() {
             >
               <Text variant="body" color="primary">
                 Nothing on this website constitutes an offer to sell or
-                a solicitation to buy securities or financial instruments.
+                solicitation to buy securities or financial instruments.
               </Text>
 
               <Text variant="body" color="secondary">
-                This website is informational only and does not constitute
-                any form of investment or financial solicitation.
+                Informational only. No investment or financial solicitation.
               </Text>
             </div>
           </div>
@@ -129,14 +128,13 @@ export default function Disclosures() {
               </Text>
 
               <Text variant="body" color="secondary">
-                Statements on this website apply only to Axiom Group
-                unless explicitly stated otherwise.
+                Statements apply only to Axiom Group unless explicitly
+                stated otherwise.
               </Text>
 
               <Text variant="body" color="secondary">
                 Each venture maintains its own legal structure, operations,
-                and documentation. Information about individual ventures
-                should be obtained directly from those ventures.
+                and documentation.
               </Text>
             </div>
           </div>
@@ -166,12 +164,12 @@ export default function Disclosures() {
               }}
             >
               <Text variant="body" color="primary">
-                This website and these disclosures are governed by applicable law.
+                This website and disclosures governed by applicable law.
               </Text>
 
               <Text variant="body" color="secondary">
-                Axiom Group operates in compliance with all applicable regulations
-                and legal requirements in the jurisdictions where it operates.
+                Axiom Group operates in compliance with applicable regulations
+                and legal requirements.
               </Text>
             </div>
           </div>

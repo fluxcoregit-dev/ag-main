@@ -12,24 +12,24 @@ export function Process() {
   const framework = [
     {
       title: 'Discover',
-      description: 'We begin with understanding: the problem space, the constraints, the context. Discovery is not a phase but a continuous mode of inquiry that informs all subsequent decisions. We seek clarity before action.',
+      description: 'Understanding the problem space, constraints, and context. A continuous mode of inquiry informing all decisions.',
     },
     {
       title: 'Design',
-      description: 'We define the structure, relationships, and principles that will guide implementation. Design here means architectural thinking—establishing the patterns and standards that make coherent systems possible.',
+      description: 'Structure, relationships, and principles guiding implementation. Architectural thinking establishing patterns and standards for coherent systems.',
     },
     {
       title: 'Build',
-      description: 'We implement with discipline, following the patterns established in design. Building is execution informed by principle, not just delivery. Each implementation reinforces and refines the underlying architecture.',
+      description: 'Implementation following patterns established in design. Execution informed by principle. Each implementation reinforces the underlying architecture.',
     },
     {
       title: 'Evolve',
-      description: 'We recognize that systems must adapt. Evolution is the ongoing refinement and extension of what exists, informed by what we discover through use. This mode ensures that initial implementations remain relevant and improve over time.',
+      description: 'Systems must adapt. Ongoing refinement and extension informed by discovery through use. Initial implementations remain relevant and improve over time.',
     },
   ];
 
   return (
-    <Section spacing="lg" layer="section">
+    <Section spacing="lg" layer="section" temperature="warm">
       <Container>
         <div
           style={{
@@ -55,7 +55,8 @@ export function Process() {
               </Heading>
             </div>
             <Text variant="body" color="secondary">
-              Axiom Group operates under a governing framework of four modes of thinking that guide decisions across all ventures and systems. These modes may occur simultaneously or repeatedly; they are principles, not steps.
+              Four modes of thinking guiding decisions across all ventures and systems.
+              Principles, not steps.
             </Text>
           </div>
 

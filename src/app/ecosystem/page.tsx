@@ -18,7 +18,7 @@ export const metadata: Metadata = {
  */
 export default function Ecosystem() {
   return (
-    <Section spacing="md" layer="section">
+    <Section spacing="md" layer="section" temperature="neutral">
       <Container>
         <div
           style={{
@@ -47,10 +47,7 @@ export default function Ecosystem() {
 
             <div style={{ marginTop: '2rem' }}>
               <Text variant="body" color="secondary">
-                Axiom Group's ecosystem is built on five foundational domains, each
-                representing a long-term commitment to systemic excellence rather than
-                short-term execution. These pillars are enduring capability areas that
-                support all ventures within the portfolio.
+                Five foundational domains representing long-term capability areas.
               </Text>
             </div>
           </div>
@@ -64,7 +61,7 @@ export default function Ecosystem() {
               width: '100%',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 Product & Platform Engineering
               </Heading>
@@ -78,10 +75,9 @@ export default function Ecosystem() {
               }}
             >
               <Text variant="body" color="primary">
-                We establish the technical foundations and architectural patterns that
-                enable scalable, maintainable product development across the ecosystem.
-                Our focus is on systems that outlast individual implementations and
-                provide a stable base for continuous evolution.
+                Technical foundations and architectural patterns enabling scalable,
+                maintainable product development. Systems that outlast individual
+                implementations.
               </Text>
             </div>
 
@@ -89,23 +85,19 @@ export default function Ecosystem() {
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '0.75rem',
-                marginTop: '2.5rem',
+                gap: '0.875rem',
+                marginTop: '1rem',
               }}
             >
               <Text variant="body" color="secondary">
-                This domain encompasses platform architecture, development standards,
-                code quality frameworks, and the technical infrastructure that allows
-                multiple products to share common capabilities. We prioritize patterns
-                that reduce complexity over time rather than patterns that optimize
-                for initial speed of delivery.
+                Platform architecture, development standards, code quality frameworks,
+                and technical infrastructure enabling shared capabilities. Patterns
+                that reduce complexity over time.
               </Text>
 
               <Text variant="body" color="secondary">
-                The engineering work at Axiom Group is not about building features
-                but about establishing the technical systems that make feature
-                development faster, more reliable, and more coherent across the
-                entire portfolio.
+                Establishing technical systems that make feature development faster,
+                more reliable, and more coherent across the portfolio.
               </Text>
             </div>
           </div>
@@ -117,10 +109,10 @@ export default function Ecosystem() {
               alignItems: 'flex-start',
               gap: 0,
               width: '100%',
-              marginTop: '5rem',
+              marginTop: '3rem',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 AI & Intelligent Systems
               </Heading>
@@ -134,10 +126,9 @@ export default function Ecosystem() {
               }}
             >
               <Text variant="body" color="primary">
-                We develop the frameworks and methodologies for building intelligent
-                systems that learn, adapt, and operate autonomously. This domain
-                encompasses both the technical infrastructure and the principles for
-                responsible AI development.
+                Frameworks and methodologies for intelligent systems that learn,
+                adapt, and operate autonomously. Technical infrastructure and
+                principles for responsible AI development.
               </Text>
             </div>
 
@@ -145,22 +136,20 @@ export default function Ecosystem() {
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '0.75rem',
-                marginTop: '2.5rem',
+                gap: '0.875rem',
+                marginTop: '1rem',
               }}
             >
               <Text variant="body" color="secondary">
-                Intelligence at Axiom Group is treated as infrastructure, embedded
-                within systems rather than added as a feature. We build the foundational
-                capabilities that allow AI to compound in value over time, creating
-                systems that become more capable through use rather than requiring
-                constant manual intervention.
+                Intelligence as infrastructure, embedded within systems rather than
+                added as a feature. Foundational capabilities allowing AI to compound
+                in value over time.
               </Text>
 
               <Text variant="body" color="secondary">
-                Our approach to AI emphasizes architectural thinking over model
-                optimization, long-term capability building over short-term performance
-                gains, and systemic integration over isolated implementations.
+                Architectural thinking over model optimization. Long-term capability
+                building over short-term performance gains. Systemic integration over
+                isolated implementations.
               </Text>
             </div>
           </div>
@@ -172,10 +161,10 @@ export default function Ecosystem() {
               alignItems: 'flex-start',
               gap: 0,
               width: '100%',
-              marginTop: '5rem',
+              marginTop: '3rem',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 Design Systems & Brand Architecture
               </Heading>
@@ -189,10 +178,9 @@ export default function Ecosystem() {
               }}
             >
               <Text variant="body" color="primary">
-                We create the visual and interaction standards that ensure coherence
-                across all touchpoints. This includes design systems, brand guidelines,
-                and the architectural thinking that makes consistent expression possible
-                at scale.
+                Visual and interaction standards ensuring coherence across all
+                touchpoints. Design systems, brand guidelines, and architectural
+                thinking for consistent expression at scale.
               </Text>
             </div>
 
@@ -200,23 +188,20 @@ export default function Ecosystem() {
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '0.75rem',
-                marginTop: '2.5rem',
+                gap: '0.875rem',
+                marginTop: '1rem',
               }}
             >
               <Text variant="body" color="secondary">
-                Design at Axiom Group is not about aesthetics but about establishing
-                the patterns and principles that allow multiple products and brands
-                to operate with visual and interactional coherence. We build the
-                infrastructure of expression that makes independent design decisions
-                possible while maintaining overall consistency.
+                Patterns and principles allowing multiple products and brands to
+                operate with visual and interactional coherence. Infrastructure of
+                expression enabling independent design decisions while maintaining
+                consistency.
               </Text>
 
               <Text variant="body" color="secondary">
-                This domain ensures that every visual and interaction decision
-                contributes to a larger system of expression, creating a coherent
-                experience across the entire ecosystem without requiring centralized
-                control over every design choice.
+                Every visual and interaction decision contributes to a larger system
+                of expression, creating coherence across the ecosystem.
               </Text>
             </div>
           </div>
@@ -228,10 +213,10 @@ export default function Ecosystem() {
               alignItems: 'flex-start',
               gap: 0,
               width: '100%',
-              marginTop: '5rem',
+              marginTop: '3rem',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 Growth Infrastructure & Analytics
               </Heading>
@@ -245,10 +230,8 @@ export default function Ecosystem() {
               }}
             >
               <Text variant="body" color="primary">
-                We build the measurement and optimization systems that enable
-                data-driven decision-making without compromising user experience or
-                long-term value. The focus is on infrastructure that supports
-                sustainable growth.
+                Measurement and optimization systems enabling data-driven
+                decision-making. Infrastructure supporting sustainable growth.
               </Text>
             </div>
 
@@ -256,23 +239,19 @@ export default function Ecosystem() {
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '0.75rem',
-                marginTop: '2.5rem',
+                gap: '0.875rem',
+                marginTop: '1rem',
               }}
             >
               <Text variant="body" color="secondary">
-                Analytics at Axiom Group is about establishing the measurement
-                frameworks and data infrastructure that allow ventures to understand
-                their systems and make informed decisions. We prioritize measurement
-                that supports long-term understanding over metrics that optimize for
-                short-term outcomes.
+                Measurement frameworks and data infrastructure allowing ventures to
+                understand their systems. Long-term understanding over short-term
+                metrics.
               </Text>
 
               <Text variant="body" color="secondary">
-                This domain ensures that growth is built on solid foundations rather
-                than temporary optimizations, creating systems that can scale
-                sustainably while maintaining the quality and coherence that define
-                the ecosystem.
+                Growth built on solid foundations rather than temporary optimizations.
+                Systems that scale sustainably while maintaining quality and coherence.
               </Text>
             </div>
           </div>
@@ -284,10 +263,10 @@ export default function Ecosystem() {
               alignItems: 'flex-start',
               gap: 0,
               width: '100%',
-              marginTop: '5rem',
+              marginTop: '3rem',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 Security, Reliability & Compliance
               </Heading>
@@ -301,10 +280,9 @@ export default function Ecosystem() {
               }}
             >
               <Text variant="body" color="primary">
-                We establish the security standards, reliability patterns, and
-                compliance frameworks that protect both the ecosystem and its users.
-                This domain ensures that foundational concerns are addressed
-                systematically, not reactively.
+                Security standards, reliability patterns, and compliance frameworks
+                protecting the ecosystem and its users. Foundational concerns addressed
+                systematically.
               </Text>
             </div>
 
@@ -312,22 +290,18 @@ export default function Ecosystem() {
               style={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: '0.75rem',
-                marginTop: '2.5rem',
+                gap: '0.875rem',
+                marginTop: '1rem',
               }}
             >
               <Text variant="body" color="secondary">
-                Security and reliability at Axiom Group are not afterthoughts but
-                foundational concerns built into every system from the start. We
-                establish the patterns and standards that make secure, reliable
-                systems the default rather than the exception.
+                Security and reliability built into every system from the start.
+                Patterns and standards making secure, reliable systems the default.
               </Text>
 
               <Text variant="body" color="secondary">
-                This domain ensures that the ecosystem can operate with confidence,
-                knowing that security, reliability, and compliance are addressed
-                systematically rather than being bolted on after the fact. We build
-                the infrastructure of trust that enables long-term operation.
+                Security, reliability, and compliance addressed systematically.
+                Infrastructure of trust enabling long-term operation.
               </Text>
             </div>
           </div>

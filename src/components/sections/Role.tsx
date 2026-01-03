@@ -10,7 +10,7 @@ import { tokens } from '@/lib/tokens';
  */
 export function Role() {
   return (
-    <Section spacing="lg" layer="section">
+    <Section spacing="lg" layer="section" temperature="neutral">
       <Container>
         <div
           style={{
@@ -21,7 +21,7 @@ export function Role() {
             maxWidth: '800px',
           }}
         >
-          <div style={{ marginTop: '4rem', marginBottom: '3rem' }}>
+          <div style={{ marginTop: '4rem', marginBottom: '2rem' }}>
             <Heading level="h2">
               The Role of Axiom Group
             </Heading>
@@ -36,9 +36,7 @@ export function Role() {
           >
             <Text variant="body" color="primary">
               Axiom Group operates above individual products and companies. We set
-              standards rather than execute tasks. Our focus is on systems, architecture,
-              and long-term thinking that enables clarity, scale, and durability across
-              the entire ecosystem.
+              standards rather than execute tasks.
             </Text>
           </div>
 
@@ -46,24 +44,19 @@ export function Role() {
             style={{
               display: 'flex',
               flexDirection: 'column',
-              gap: '0.75rem',
-              marginTop: '1.5rem',
+              gap: '0.875rem',
+              marginTop: '1rem',
             }}
           >
             <Text variant="body" color="secondary">
-              While individual ventures build products and serve customers, Axiom Group
-              establishes the foundational principles, technical standards, and
-              organizational patterns that allow those ventures to operate with greater
-              coherence and efficiency. We create the infrastructure of thought and
-              practice that makes independent execution possible.
+              Individual ventures build products and serve customers. Axiom Group
+              establishes foundational principles, technical standards, and
+              organizational patterns.
             </Text>
 
             <Text variant="body" color="secondary">
-              This separation of concerns—between the parent company's systemic work
-              and each venture's operational work—ensures that both can focus on what
-              they do best. Axiom Group maintains the long view; the ventures maintain
-              the immediate execution. Together, they form a structure built for
-              sustained growth and enduring value.
+              The parent company maintains the long view. The ventures maintain
+              immediate execution.
             </Text>
           </div>
         </div>

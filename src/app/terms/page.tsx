@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Terms() {
   return (
-    <Section spacing="md" layer="section">
+    <Section spacing="md" layer="section" temperature="neutral">
       <Container>
         <div
           style={{
@@ -40,15 +40,14 @@ export default function Terms() {
               width: '100%',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 Acceptance
               </Heading>
             </div>
 
             <Text variant="body" color="primary">
-              By accessing this website, you agree to these terms of use.
-              If you do not agree, you must not use this website.
+              Accessing this website constitutes agreement to these terms.
             </Text>
           </div>
 
@@ -59,10 +58,10 @@ export default function Terms() {
               alignItems: 'flex-start',
               gap: 0,
               width: '100%',
-              marginTop: '5rem',
+              marginTop: '3rem',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 Use of Website
               </Heading>
@@ -76,15 +75,13 @@ export default function Terms() {
               }}
             >
               <Text variant="body" color="primary">
-                This website is provided for informational purposes only.
+                Informational purposes only.
               </Text>
             </div>
 
-            <div style={{ marginTop: '1.5rem' }}>
+            <div style={{ marginTop: '1rem' }}>
               <Text variant="body" color="secondary">
-                You may use this website to access information about Axiom Group
-                and its ecosystem. You must not use this website for any unlawful
-                purpose or in any way that could damage or impair the website.
+                Use for lawful purposes only. Do not damage or impair the website.
               </Text>
             </div>
           </div>
@@ -96,10 +93,10 @@ export default function Terms() {
               alignItems: 'flex-start',
               gap: 0,
               width: '100%',
-              marginTop: '5rem',
+              marginTop: '3rem',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 Intellectual Property
               </Heading>
@@ -113,16 +110,15 @@ export default function Terms() {
               }}
             >
               <Text variant="body" color="primary">
-                All content on this website, including text, graphics, logos, and
-                other materials, is the property of Axiom Group or its licensors
-                and is protected by intellectual property laws.
+                All content is the property of Axiom Group or its licensors,
+                protected by intellectual property laws.
               </Text>
             </div>
 
-            <div style={{ marginTop: '1.5rem' }}>
+            <div style={{ marginTop: '1rem' }}>
               <Text variant="body" color="secondary">
-                You may not reproduce, distribute, or create derivative works from
-                this content without explicit written permission.
+                No reproduction, distribution, or derivative works without
+                explicit written permission.
               </Text>
             </div>
           </div>
@@ -134,10 +130,10 @@ export default function Terms() {
               alignItems: 'flex-start',
               gap: 0,
               width: '100%',
-              marginTop: '5rem',
+              marginTop: '3rem',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 No Services or Products
               </Heading>
@@ -151,15 +147,14 @@ export default function Terms() {
               }}
             >
               <Text variant="body" color="primary">
-                Axiom Group does not offer products or services through this website.
+                No products or services offered through this website.
               </Text>
             </div>
 
-            <div style={{ marginTop: '1.5rem' }}>
+            <div style={{ marginTop: '1rem' }}>
               <Text variant="body" color="secondary">
                 Nothing on this site constitutes an offer, solicitation, or agreement.
-                This website is informational only and does not create any contractual
-                or legal relationship.
+                No contractual or legal relationship created.
               </Text>
             </div>
           </div>
@@ -171,10 +166,10 @@ export default function Terms() {
               alignItems: 'flex-start',
               gap: 0,
               width: '100%',
-              marginTop: '5rem',
+              marginTop: '3rem',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 Limitation of Liability
               </Heading>
@@ -188,15 +183,13 @@ export default function Terms() {
               }}
             >
               <Text variant="body" color="primary">
-                Axiom Group provides this website "as is" without warranties of any kind.
+                This website provided "as is" without warranties.
               </Text>
             </div>
 
-            <div style={{ marginTop: '1.5rem' }}>
+            <div style={{ marginTop: '1rem' }}>
               <Text variant="body" color="secondary">
-                Axiom Group is not liable for any damages arising from your use of
-                this website, including but not limited to direct, indirect, incidental,
-                or consequential damages.
+                No liability for damages arising from use of this website.
               </Text>
             </div>
           </div>
@@ -208,18 +201,18 @@ export default function Terms() {
               alignItems: 'flex-start',
               gap: 0,
               width: '100%',
-              marginTop: '5rem',
+              marginTop: '3rem',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 Changes
               </Heading>
             </div>
 
             <Text variant="body" color="primary">
-              Axiom Group may modify these terms at any time. Continued use of
-              this website after changes constitutes acceptance of the modified terms.
+              Terms may be modified at any time. Continued use constitutes
+              acceptance of modified terms.
             </Text>
           </div>
         </div>

@@ -28,6 +28,11 @@ export const colorLayers = {
   border: 'var(--color-layer-border)',
   hoverLighten: 'var(--color-layer-hover-lighten)',
   activeLighten: 'var(--color-layer-active-lighten)',
+  // Temperature variations
+  baseCool: 'var(--color-layer-base-cool)',
+  sectionCool: 'var(--color-layer-section-cool)',
+  sectionNeutral: 'var(--color-layer-section-neutral)',
+  sectionWarm: 'var(--color-layer-section-warm)',
 } as const;
 
 /**

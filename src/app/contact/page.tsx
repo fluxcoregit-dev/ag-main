@@ -56,7 +56,7 @@ export default async function Contact({
   const showError = params?.error;
 
   return (
-    <Section spacing="md" layer="section">
+    <Section spacing="md" layer="section" temperature="neutral">
       <Container>
         <div
           style={{
@@ -87,8 +87,7 @@ export default async function Contact({
                 </Heading>
 
                 <Text variant="body" color="secondary">
-                  For inquiries about Axiom Group, our ecosystem, or potential
-                  collaboration, please reach out through the form below or via email.
+                  Inquiries via form or email.
                 </Text>
               </div>
 

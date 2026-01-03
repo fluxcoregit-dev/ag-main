@@ -12,7 +12,7 @@ import { tokens } from '@/lib/tokens';
  */
 export function LongTerm() {
   return (
-    <Section spacing="lg" layer="section">
+    <Section spacing="lg" layer="section" temperature="neutral">
       <Container>
         <div
           style={{
@@ -23,7 +23,7 @@ export function LongTerm() {
             maxWidth: '800px',
           }}
         >
-          <div style={{ marginTop: '4rem', marginBottom: '3rem' }}>
+          <div style={{ marginTop: '4rem', marginBottom: '2rem' }}>
             <Heading level="h2">
               Long-Term Thinking
             </Heading>
@@ -37,30 +37,26 @@ export function LongTerm() {
             }}
           >
             <Text variant="body" color="primary">
-              Axiom Group operates on multi-year system lifecycles. We build for
-              durability, maintainability, and thoughtful evolution. Our preference
-              is for systems that improve over time rather than systems that require
-              constant replacement or major rewrites.
+              Multi-year system lifecycles. Systems that improve over time rather
+              than require constant replacement.
             </Text>
           </div>
 
           <div
             style={{
-              marginTop: '2.5rem',
+              marginTop: '1rem',
             }}
           >
             <Text variant="body" color="secondary">
-              This long-term orientation means we resist short-term optimization at
-              the cost of long-term clarity. We choose architectural decisions that
-              may take longer to implement but create foundations that support
-              sustained growth. We prioritize understanding and coherence over speed
-              and novelty.
+              We resist short-term optimization at the cost of long-term clarity.
+              Architectural decisions create foundations supporting sustained growth.
             </Text>
           </div>
 
           <div
             style={{
-              marginTop: '5rem',
+              marginTop: '5.5rem',
+              marginBottom: '3rem',
               width: '100%',
             }}
           >

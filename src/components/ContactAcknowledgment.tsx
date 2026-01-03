@@ -17,7 +17,7 @@ export function ContactAcknowledgment() {
     // Move focus to acknowledgment title after mount
     // Only runs on client, avoiding hydration issues
     if (titleRef.current) {
-      const heading = titleRef.current.querySelector('h1');
+      const heading = titleRef.current.querySelector('h2');
       if (heading) {
         heading.setAttribute('tabIndex', '-1');
         heading.focus();
@@ -36,8 +36,8 @@ export function ContactAcknowledgment() {
         width: '100%',
       }}
     >
-      <div style={{ marginBottom: '3rem' }}>
-        <Heading level="h1">
+      <div style={{ marginBottom: '2rem' }}>
+        <Heading level="h2">
           Message received
         </Heading>
       </div>
@@ -50,13 +50,7 @@ export function ContactAcknowledgment() {
         }}
       >
         <Text variant="body" color="primary">
-          Your message has been received. We will respond if and when appropriate.
-        </Text>
-      </div>
-
-      <div style={{ marginTop: '2.5rem' }}>
-        <Text variant="body" color="secondary">
-          This inbox is reviewed, not monitored.
+          Your message has been received.
         </Text>
       </div>
     </div>

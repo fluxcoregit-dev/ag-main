@@ -12,7 +12,7 @@ import { tokens } from '@/lib/tokens';
  */
 export function Hero() {
   return (
-    <Section spacing="xl" layer="base">
+    <Section spacing="xl" layer="base" temperature="cool">
       <Container>
         <div
           style={{
@@ -21,9 +21,10 @@ export function Hero() {
             alignItems: 'flex-start',
             gap: 0,
             maxWidth: '800px',
+            marginTop: tokens.spacing.section.md, // Reduced top spacing for viewport visibility
           }}
         >
-          <div style={{ marginBottom: '6rem' }}>
+          <div style={{ marginBottom: '9rem' }}>
             <Heading level="h1">
               Building intelligent systems, products, and brands from first principles.
             </Heading>
@@ -35,11 +36,11 @@ export function Hero() {
               flexDirection: 'column',
               gap: 0,
               maxWidth: '600px',
+              marginTop: '3rem',
             }}
           >
             <Text variant="body" color="secondary">
-              Axiom Group is a parent technology and AI holding company focused on
-              building enduring systems and long-term value, not short-term execution.
+              A parent technology and AI holding company building enduring systems.
             </Text>
           </div>
 
@@ -49,7 +50,7 @@ export function Hero() {
               flexDirection: 'row',
               gap: tokens.spacing.component.md,
               flexWrap: 'wrap',
-              marginTop: '4rem',
+              marginTop: '6rem',
             }}
           >
             <Link href="/ecosystem" className="button-base">

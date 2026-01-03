@@ -22,10 +22,7 @@ export function Header() {
 
   useEffect(() => {
     setMounted(true);
-    // Update marginBottom after mount to avoid hydration mismatch
-    if (headerRef.current && pathname === '/') {
-      headerRef.current.style.marginBottom = tokens.spacing.section.md;
-    }
+    // No marginBottom needed - Hero section handles its own spacing
   }, [pathname]);
 
   // Use pathname only after mount to avoid hydration mismatch

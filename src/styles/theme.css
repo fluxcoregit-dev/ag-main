@@ -36,6 +36,29 @@
   /* Active state - more pronounced lightening */
   --color-layer-active-lighten: 0.12;
 
+  /* ============================================
+     SURFACE TEMPERATURE CONTROL
+     ============================================
+     Intent: Subtle temperature variations to increase perceived
+     depth and scale without visible decoration. Temperature shifts
+     are extremely subtle, using minimal chroma adjustments to create
+     institutional presence through imperceptible color temperature.
+     Cool: slight blue shift (240° hue, minimal chroma)
+     Neutral: no temperature shift (default)
+     Warm: slight warm shift (60° hue, minimal chroma) */
+  
+  /* Base layer with cool temperature - very subtle blue shift */
+  --color-layer-base-cool: oklch(0.08 0.002 240);
+  
+  /* Section layer with cool temperature - very subtle blue shift */
+  --color-layer-section-cool: oklch(0.10 0.002 240);
+  
+  /* Section layer with neutral temperature - no shift (default) */
+  --color-layer-section-neutral: oklch(0.10 0 0);
+  
+  /* Section layer with warm temperature - very subtle warm shift */
+  --color-layer-section-warm: oklch(0.10 0.002 60);
+
 
   /* ============================================
      TEXT COLORS

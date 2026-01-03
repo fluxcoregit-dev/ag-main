@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Privacy() {
   return (
-    <Section spacing="md" layer="section">
+    <Section spacing="md" layer="section" temperature="neutral">
       <Container>
         <div
           style={{
@@ -40,7 +40,7 @@ export default function Privacy() {
               width: '100%',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 Data Collection
               </Heading>
@@ -54,15 +54,14 @@ export default function Privacy() {
               }}
             >
               <Text variant="body" color="primary">
-                Axiom Group collects only the minimum information necessary to operate
-                this website and respond to direct inquiries.
+                Minimum information necessary to operate this website and respond
+                to inquiries.
               </Text>
             </div>
 
-            <div style={{ marginTop: '1.5rem' }}>
+            <div style={{ marginTop: '1rem' }}>
               <Text variant="body" color="secondary">
-                We do not engage in behavioral tracking, advertising tracking,
-                or third-party analytics.
+                No behavioral tracking, advertising tracking, or third-party analytics.
               </Text>
             </div>
           </div>
@@ -74,19 +73,18 @@ export default function Privacy() {
               alignItems: 'flex-start',
               gap: 0,
               width: '100%',
-              marginTop: '5rem',
+              marginTop: '3rem',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 Information You Provide
               </Heading>
             </div>
 
             <Text variant="body" color="primary">
-              If you contact Axiom Group through this website, we may receive your name,
-              email address, and the contents of your message. This information is used
-              solely to respond to your inquiry.
+              Contact through this website may include name, email address, and message
+              contents. Used solely to respond to inquiries.
             </Text>
           </div>
 
@@ -97,18 +95,17 @@ export default function Privacy() {
               alignItems: 'flex-start',
               gap: 0,
               width: '100%',
-              marginTop: '5rem',
+              marginTop: '3rem',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 Cookies
               </Heading>
             </div>
 
             <Text variant="body" color="primary">
-              This website does not use cookies for tracking, advertising,
-              or profiling purposes.
+              No cookies for tracking, advertising, or profiling.
             </Text>
           </div>
 
@@ -119,18 +116,18 @@ export default function Privacy() {
               alignItems: 'flex-start',
               gap: 0,
               width: '100%',
-              marginTop: '5rem',
+              marginTop: '3rem',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 Data Sharing
               </Heading>
             </div>
 
             <Text variant="body" color="primary">
-              Axiom Group does not sell, rent, or share personal information
-              with third parties, except where required by law.
+              Personal information is not sold, rented, or shared with third parties,
+              except where required by law.
             </Text>
           </div>
 
@@ -141,18 +138,17 @@ export default function Privacy() {
               alignItems: 'flex-start',
               gap: 0,
               width: '100%',
-              marginTop: '5rem',
+              marginTop: '3rem',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 Data Retention
               </Heading>
             </div>
 
             <Text variant="body" color="primary">
-              Information submitted through direct contact is retained only
-              as long as necessary to address the inquiry.
+              Information retained only as long as necessary to address the inquiry.
             </Text>
           </div>
 
@@ -163,17 +159,17 @@ export default function Privacy() {
               alignItems: 'flex-start',
               gap: 0,
               width: '100%',
-              marginTop: '5rem',
+              marginTop: '3rem',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 Contact
               </Heading>
             </div>
 
             <Text variant="body" color="primary">
-              Questions regarding this policy may be directed to:{' '}
+              Questions:{' '}
               <a
                 href="mailto:contact@axiomgroup.services"
                 className="link-base"

@@ -55,14 +55,13 @@ export default function Legal() {
               }}
             >
               <Text variant="body" color="primary">
-                Axiom Group is a parent technology and AI holding entity.
+                A parent technology and AI holding entity.
               </Text>
 
               <Text variant="body" color="secondary">
-                It exists to establish, govern, and steward independent ventures
-                operating under shared long-term principles and structural standards.
-                Axiom Group does not offer consumer products or services directly
-                through this website.
+                Establishes, governs, and stewards independent ventures operating
+                under shared long-term principles. No consumer products or services
+                offered through this website.
               </Text>
             </div>
           </div>
@@ -92,8 +91,8 @@ export default function Legal() {
               }}
             >
               <Text variant="body" color="primary">
-                The following documents govern the use of this website
-                and outline Axiom Group's legal and institutional posture:
+                Documents governing use of this website and outlining legal
+                and institutional posture:
               </Text>
 
               <div
@@ -148,9 +147,9 @@ export default function Legal() {
               }}
             >
               <Text variant="body" color="primary">
-                These documents apply only to the Axiom Group website and communications.
-                Individual ventures operating under Axiom Group maintain their own
-                legal and operational documentation.
+                These documents apply only to the Axiom Group website and
+                communications. Individual ventures maintain their own legal
+                and operational documentation.
               </Text>
             </div>
           </div>

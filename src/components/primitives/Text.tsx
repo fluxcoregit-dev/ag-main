@@ -23,12 +23,12 @@ interface TextProps {
 const textStyles: Record<TextVariant, React.CSSProperties> = {
   body: {
     fontSize: '1rem',
-    lineHeight: 1.6,
+    lineHeight: 1.5, // Reduced from 1.6 (~6%) for institutional density
     fontFamily: 'var(--font-sans-serif)',
   },
   meta: {
     fontSize: '0.875rem',
-    lineHeight: 1.5,
+    lineHeight: 1.4, // Reduced from 1.5 (~7%) for document-like gravity
     fontFamily: 'var(--font-sans-serif)',
   },
 };

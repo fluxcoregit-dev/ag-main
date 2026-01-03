@@ -11,7 +11,7 @@ import { tokens } from '@/lib/tokens';
  */
 export function Intelligence() {
   return (
-    <Section spacing="lg" layer="section">
+    <Section spacing="lg" layer="section" temperature="cool">
       <Container>
         <div
           style={{
@@ -22,7 +22,7 @@ export function Intelligence() {
             maxWidth: '800px',
           }}
         >
-          <div style={{ marginTop: '4rem', marginBottom: '3rem' }}>
+          <div style={{ marginTop: '4rem', marginBottom: '2rem' }}>
             <Heading level="h2">
               Intelligence as Infrastructure
             </Heading>
@@ -36,25 +36,20 @@ export function Intelligence() {
             }}
           >
             <Text variant="body" color="primary">
-              At Axiom Group, artificial intelligence is treated as foundational
-              infrastructure within systems, not as a feature or product. Intelligence
-              supports decision-making, automation, and adaptability as embedded
-              capabilities. Agentic behavior emerges from thoughtful system design,
-              not from novelty or isolated implementations.
+              Artificial intelligence is foundational infrastructure within systems,
+              not a feature or product. Intelligence supports decision-making,
+              automation, and adaptability as embedded capabilities.
             </Text>
           </div>
 
           <div
             style={{
-              marginTop: '2.5rem',
+              marginTop: '1rem',
             }}
           >
             <Text variant="body" color="secondary">
-              This infrastructure approach means that AI compounds over time rather
-              than delivering one-off benefits. Each system built on this foundation
-              becomes more capable, and the infrastructure itself improves through
-              use. Intelligence becomes a persistent layer that enables everything
-              else, operating quietly in the background rather than demanding attention.
+              AI compounds over time. Each system becomes more capable through use.
+              Intelligence operates as a persistent layer, enabling everything else.
             </Text>
           </div>
         </div>

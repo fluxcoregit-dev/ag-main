@@ -19,7 +19,7 @@ export const metadata: Metadata = {
  */
 export default function About() {
   return (
-    <Section spacing="md" layer="section">
+    <Section spacing="md" layer="section" temperature="neutral">
       <Container>
         <div
           style={{
@@ -47,7 +47,7 @@ export default function About() {
               width: '100%',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 Mandate
               </Heading>
@@ -61,23 +61,20 @@ export default function About() {
               }}
             >
               <Text variant="body" color="primary">
-                Axiom Group is a parent technology and AI holding company established
-                to build and support enduring systems. Our mandate is to create the
-                foundational infrastructure—technical, organizational, and strategic—that
-                enables long-term value creation across a portfolio of ventures.
+                A parent technology and AI holding company building and supporting
+                enduring systems. Foundational infrastructure—technical, organizational,
+                and strategic—enabling long-term value creation.
               </Text>
             </div>
 
             <div
               style={{
-                marginTop: '2.5rem',
+                marginTop: '1rem',
               }}
             >
               <Text variant="body" color="secondary">
-                We operate with a multi-year time horizon, prioritizing systems that
-                improve over time rather than solutions that require constant replacement.
-                Our focus is on establishing patterns, standards, and principles that
-                compound in value rather than delivering one-off implementations.
+                Multi-year time horizon. Systems that improve over time. Patterns,
+                standards, and principles that compound in value.
               </Text>
             </div>
           </div>
@@ -89,10 +86,10 @@ export default function About() {
               alignItems: 'flex-start',
               gap: 0,
               width: '100%',
-              marginTop: '5rem',
+              marginTop: '3rem',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 Principles
               </Heading>
@@ -106,22 +103,20 @@ export default function About() {
               }}
             >
               <Text variant="body" color="primary">
-                Axiom Group operates under a set of core principles that guide all
-                decisions: systems over features, architecture over implementation,
-                long-term clarity over short-term optimization, and coherence over speed.
+                Core principles guiding all decisions: systems over features,
+                architecture over implementation, long-term clarity over short-term
+                optimization, coherence over speed.
               </Text>
             </div>
 
             <div
               style={{
-                marginTop: '2.5rem',
+                marginTop: '1rem',
               }}
             >
               <Text variant="body" color="secondary">
-                These principles are not aspirational statements but operational
-                constraints. They determine what we build, how we build it, and what
-                we choose not to build. They ensure that every decision contributes
-                to the long-term health and capability of the ecosystem.
+                Operational constraints, not aspirational statements. They determine
+                what we build, how we build it, and what we choose not to build.
               </Text>
             </div>
           </div>
@@ -133,10 +128,10 @@ export default function About() {
               alignItems: 'flex-start',
               gap: 0,
               width: '100%',
-              marginTop: '5rem',
+              marginTop: '3rem',
             }}
           >
-            <div style={{ marginBottom: '3rem' }}>
+            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
               <Heading level="h2">
                 Time Horizon
               </Heading>
@@ -150,24 +145,20 @@ export default function About() {
               }}
             >
               <Text variant="body" color="primary">
-                Axiom Group is structured for permanence. We make decisions with
-                multi-year and multi-decade consequences in mind. This time horizon
-                influences everything from technical architecture to organizational
-                design to strategic partnerships.
+                Structured for permanence. Decisions with multi-year and multi-decade
+                consequences in mind.
               </Text>
             </div>
 
             <div
               style={{
-                marginTop: '2.5rem',
+                marginTop: '1rem',
               }}
             >
               <Text variant="body" color="secondary">
-                This long-term orientation means we resist the pressure to optimize
-                for immediate outcomes when those optimizations compromise future
-                capability. We build systems that can evolve, adapt, and improve
-                over extended periods, recognizing that the most valuable work
-                compounds slowly.
+                We resist optimizing for immediate outcomes when those optimizations
+                compromise future capability. Systems that evolve, adapt, and improve
+                over extended periods.
               </Text>
             </div>
           </div>

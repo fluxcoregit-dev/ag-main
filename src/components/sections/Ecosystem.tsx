@@ -12,28 +12,28 @@ export function Ecosystem() {
   const pillars = [
     {
       title: 'Product & Platform Engineering',
-      description: 'We establish the technical foundations and architectural patterns that enable scalable, maintainable product development across the ecosystem. Our focus is on systems that outlast individual implementations.',
+      description: 'Technical foundations and architectural patterns for scalable, maintainable product development. Systems that outlast individual implementations.',
     },
     {
       title: 'AI & Intelligent Systems',
-      description: 'We develop the frameworks and methodologies for building intelligent systems that learn, adapt, and operate autonomously. This domain encompasses both the technical infrastructure and the principles for responsible AI development.',
+      description: 'Frameworks and methodologies for intelligent systems that learn, adapt, and operate autonomously. Technical infrastructure and principles for responsible AI development.',
     },
     {
       title: 'Design Systems & Brand Architecture',
-      description: 'We create the visual and interaction standards that ensure coherence across all touchpoints. This includes design systems, brand guidelines, and the architectural thinking that makes consistent expression possible at scale.',
+      description: 'Visual and interaction standards ensuring coherence across all touchpoints. Design systems, brand guidelines, and architectural thinking for consistent expression at scale.',
     },
     {
       title: 'Growth Infrastructure & Analytics',
-      description: 'We build the measurement and optimization systems that enable data-driven decision-making without compromising user experience or long-term value. The focus is on infrastructure that supports sustainable growth.',
+      description: 'Measurement and optimization systems for data-driven decision-making. Infrastructure supporting sustainable growth without compromising long-term value.',
     },
     {
       title: 'Security, Reliability & Compliance',
-      description: 'We establish the security standards, reliability patterns, and compliance frameworks that protect both the ecosystem and its users. This domain ensures that foundational concerns are addressed systematically, not reactively.',
+      description: 'Security standards, reliability patterns, and compliance frameworks protecting the ecosystem and its users. Foundational concerns addressed systematically.',
     },
   ];
 
   return (
-    <Section spacing="lg" layer="section">
+    <Section spacing="lg" layer="section" temperature="neutral">
       <Container>
         <div
           style={{
@@ -59,7 +59,7 @@ export function Ecosystem() {
               </Heading>
             </div>
             <Text variant="body" color="secondary">
-              Axiom Group's ecosystem is built on five foundational domains, each representing a long-term commitment to systemic excellence rather than short-term execution.
+              Five foundational domains representing long-term capability areas.
             </Text>
           </div>
 
