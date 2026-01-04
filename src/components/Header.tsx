@@ -113,6 +113,41 @@ export function Header() {
               </Text>
             </Link>
             <Link 
+              href="/writing" 
+              className="link-base" 
+              aria-label="View writing"
+              style={{ textDecoration: 'none' }}
+              onMouseEnter={(e) => {
+                if (currentPath !== '/writing') {
+                  const textElement = e.currentTarget.querySelector('span');
+                  if (textElement) {
+                    textElement.style.color = tokens.textColors.primary;
+                  }
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (currentPath !== '/writing') {
+                  const textElement = e.currentTarget.querySelector('span');
+                  if (textElement) {
+                    textElement.style.color = tokens.textColors.secondary;
+                  }
+                }
+              }}
+            >
+              <Text 
+                as="span" 
+                variant="body" 
+                style={{
+                  color: currentPath === '/writing' 
+                    ? tokens.textColors.primary 
+                    : tokens.textColors.secondary,
+                  transition: 'color var(--motion-duration-standard) var(--motion-easing-standard)',
+                }}
+              >
+                Writing
+              </Text>
+            </Link>
+            <Link 
               href="/ecosystem" 
               className="link-base" 
               aria-label="View ecosystem"
