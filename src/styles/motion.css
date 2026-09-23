@@ -1,0 +1,168 @@
+.scene-hero,
+.scene-stack,
+.inquiry-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.scene-hero {
+  background: #0b1f3a;
+}
+
+.hero-light,
+.inquiry-glow {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 999px;
+}
+
+.hero-light {
+  top: -28%;
+  right: -4%;
+  width: 34rem;
+  height: 34rem;
+  background: radial-gradient(circle, rgba(142, 180, 232, 0.28), transparent 68%);
+  animation: breathe 18s ease-in-out infinite;
+}
+
+.hero-line {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.hero-line path {
+  fill: none;
+  stroke: rgba(142, 180, 232, 0.4);
+  stroke-width: 1;
+  stroke-dasharray: 5 12;
+  animation: trace 32s linear infinite;
+}
+
+.scene-hero > :not(.hero-light):not(.hero-line),
+.scene-stack > :not(.stack-veil),
+.inquiry-panel > :not(.inquiry-glow) {
+  position: relative;
+  z-index: 1;
+}
+
+.scene-stack {
+  background: #0b1f3a;
+}
+
+.stack-veil {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(90deg, rgba(244, 247, 251, 0.05) 1px, transparent 1px);
+  background-size: 25% 100%;
+  mask-image: linear-gradient(180deg, transparent, black 18%, black 82%, transparent);
+}
+
+.inquiry-panel {
+  background: #12315c;
+}
+
+.inquiry-glow {
+  top: -80%;
+  left: -10%;
+  width: 28rem;
+  height: 28rem;
+  background: radial-gradient(circle, rgba(142, 180, 232, 0.22), transparent 70%);
+  animation: breathe 20s ease-in-out infinite reverse;
+}
+
+.hover-tint,
+.hover-rule,
+.hover-shadow,
+.compare-line,
+.essay-title,
+.stage-mark {
+  transition: background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, color 0.35s ease, background-size 0.4s ease;
+}
+
+.group:hover .hover-tint {
+  background: #f7f9fc;
+  border-color: #c5d4e8;
+}
+
+.group:hover .hover-rule,
+a.hover-rule:hover {
+  box-shadow: inset 3px 0 0 #12315c;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 14px 32px rgba(16, 36, 68, 0.1);
+}
+
+.compare-line:hover {
+  background: rgba(231, 238, 248, 0.7);
+}
+
+.essay-title {
+  background-image: linear-gradient(#12315c, #12315c);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+}
+
+.essay-row:hover .essay-title {
+  background-size: 100% 1px;
+}
+
+.group:hover .stage-mark {
+  background: #12315c;
+  color: #fff;
+}
+
+.step-row {
+  position: relative;
+}
+
+.step-row::before {
+  content: "";
+  position: absolute;
+  top: 2.15rem;
+  right: 12%;
+  left: 12%;
+  z-index: 0;
+  height: 1px;
+  background: #c5d4e8;
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: draw 1.1s 0.15s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.75; }
+  50% { transform: translate3d(-3%, 4%, 0); opacity: 1; }
+}
+
+@keyframes trace {
+  to { stroke-dashoffset: -480; }
+}
+
+@keyframes draw {
+  to { transform: scaleX(1); }
+}
+
+@media (max-width: 1023px) {
+  .step-row::before {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-light,
+  .hero-line path,
+  .inquiry-glow,
+  .step-row::before {
+    animation: none;
+  }
+
+  .step-row::before {
+    transform: none;
+  }
+}

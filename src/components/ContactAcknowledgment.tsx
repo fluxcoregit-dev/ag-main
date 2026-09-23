@@ -1,59 +1,37 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { Heading, Text } from './primitives';
-import { tokens } from '@/lib/tokens';
+import { contactEmail } from '@/lib/site';
 
-/**
- * Contact Acknowledgment Component
- * 
- * Intent: Display quiet acknowledgment after form submission.
- * Handles focus management for accessibility.
- */
 export function ContactAcknowledgment() {
   const titleRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Move focus to acknowledgment title after mount
-    // Only runs on client, avoiding hydration issues
-    if (titleRef.current) {
-      const heading = titleRef.current.querySelector('h2');
-      if (heading) {
-        heading.setAttribute('tabIndex', '-1');
-        heading.focus();
-      }
+    const heading = titleRef.current?.querySelector('h1');
+    if (heading) {
+      heading.setAttribute('tabIndex', '-1');
+      heading.focus();
     }
   }, []);
 
   return (
-    <div
-      ref={titleRef}
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-        gap: 0,
-        width: '100%',
-      }}
-    >
-      <div style={{ marginBottom: '2rem' }}>
-        <Heading level="h2">
-          Message received
-        </Heading>
-      </div>
-
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 0,
-        }}
-      >
-        <Text variant="body" color="primary">
-          Your message has been received.
-        </Text>
+    <div ref={titleRef} className="prose-block" style={{ maxWidth: '40rem' }}>
+      <p className="eyebrow">Contact</p>
+      <Heading level="h1">Message received</Heading>
+      <Text variant="body" color="secondary">
+        We have your note. If a reply does not arrive, write directly to{' '}
+        <a href={`mailto:${contactEmail}`} className="link-base">
+          {contactEmail}
+        </a>
+        .
+      </Text>
+      <div className="actions">
+        <Link href="/" className="button-base">
+          Back to the homepage
+        </Link>
       </div>
     </div>
   );
 }
-

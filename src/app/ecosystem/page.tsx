@@ -1,313 +1,54 @@
 import type { Metadata } from 'next';
-import { Section, Container, Heading, Text } from '@/components/primitives';
-import { tokens } from '@/lib/tokens';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Engagement } from '@/components/sections/Engagement';
+import { Stack } from '@/components/sections/Stack';
+import { practices } from '@/lib/site';
 
 export const metadata: Metadata = {
-  title: 'Ecosystem | Axiom Group',
-  description: 'The domains and capability pillars that form the Axiom Group ecosystem.',
-  alternates: {
-    canonical: '/ecosystem',
-  },
+  title: 'Practices | Axiom Group',
+  description:
+    'Product architecture, intelligent systems, brand, growth infrastructure, and trust. What each Axiom Group practice covers and when to bring it.',
+  alternates: { canonical: '/ecosystem' },
 };
 
-/**
- * Ecosystem Page
- * 
- * Intent: Expand each ecosystem pillar into a full domain section.
- * Reinforce that pillars represent enduring capability areas, not services.
- */
 export default function Ecosystem() {
   return (
-    <Section spacing="md" layer="section" temperature="neutral">
-      <Container>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            gap: 0,
-            maxWidth: '800px',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-          }}
-        >
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-              gap: 0,
-              width: '100%',
-              marginBottom: '3rem',
-            }}
-          >
-            <Heading level="h1">
-              Ecosystem
-            </Heading>
-
-            <div style={{ marginTop: '2rem' }}>
-              <Text variant="body" color="secondary">
-                Five foundational domains representing long-term capability areas.
-              </Text>
-            </div>
-          </div>
-
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-              gap: 0,
-              width: '100%',
-            }}
-          >
-            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
-              <Heading level="h2">
-                Product & Platform Engineering
-              </Heading>
-            </div>
-
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 0,
-              }}
-            >
-              <Text variant="body" color="primary">
-                Technical foundations and architectural patterns enabling scalable,
-                maintainable product development. Systems that outlast individual
-                implementations.
-              </Text>
-            </div>
-
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.875rem',
-                marginTop: '1rem',
-              }}
-            >
-              <Text variant="body" color="secondary">
-                Platform architecture, development standards, code quality frameworks,
-                and technical infrastructure enabling shared capabilities. Patterns
-                that reduce complexity over time.
-              </Text>
-
-              <Text variant="body" color="secondary">
-                Establishing technical systems that make feature development faster,
-                more reliable, and more coherent across the portfolio.
-              </Text>
-            </div>
-          </div>
-
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-              gap: 0,
-              width: '100%',
-              marginTop: '3rem',
-            }}
-          >
-            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
-              <Heading level="h2">
-                AI & Intelligent Systems
-              </Heading>
-            </div>
-
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 0,
-              }}
-            >
-              <Text variant="body" color="primary">
-                Frameworks and methodologies for intelligent systems that learn,
-                adapt, and operate autonomously. Technical infrastructure and
-                principles for responsible AI development.
-              </Text>
-            </div>
-
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.875rem',
-                marginTop: '1rem',
-              }}
-            >
-              <Text variant="body" color="secondary">
-                Intelligence as infrastructure, embedded within systems rather than
-                added as a feature. Foundational capabilities allowing AI to compound
-                in value over time.
-              </Text>
-
-              <Text variant="body" color="secondary">
-                Architectural thinking over model optimization. Long-term capability
-                building over short-term performance gains. Systemic integration over
-                isolated implementations.
-              </Text>
-            </div>
-          </div>
-
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-              gap: 0,
-              width: '100%',
-              marginTop: '3rem',
-            }}
-          >
-            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
-              <Heading level="h2">
-                Design Systems & Brand Architecture
-              </Heading>
-            </div>
-
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 0,
-              }}
-            >
-              <Text variant="body" color="primary">
-                Visual and interaction standards ensuring coherence across all
-                touchpoints. Design systems, brand guidelines, and architectural
-                thinking for consistent expression at scale.
-              </Text>
-            </div>
-
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.875rem',
-                marginTop: '1rem',
-              }}
-            >
-              <Text variant="body" color="secondary">
-                Patterns and principles allowing multiple products and brands to
-                operate with visual and interactional coherence. Infrastructure of
-                expression enabling independent design decisions while maintaining
-                consistency.
-              </Text>
-
-              <Text variant="body" color="secondary">
-                Every visual and interaction decision contributes to a larger system
-                of expression, creating coherence across the ecosystem.
-              </Text>
-            </div>
-          </div>
-
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-              gap: 0,
-              width: '100%',
-              marginTop: '3rem',
-            }}
-          >
-            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
-              <Heading level="h2">
-                Growth Infrastructure & Analytics
-              </Heading>
-            </div>
-
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 0,
-              }}
-            >
-              <Text variant="body" color="primary">
-                Measurement and optimization systems enabling data-driven
-                decision-making. Infrastructure supporting sustainable growth.
-              </Text>
-            </div>
-
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.875rem',
-                marginTop: '1rem',
-              }}
-            >
-              <Text variant="body" color="secondary">
-                Measurement frameworks and data infrastructure allowing ventures to
-                understand their systems. Long-term understanding over short-term
-                metrics.
-              </Text>
-
-              <Text variant="body" color="secondary">
-                Growth built on solid foundations rather than temporary optimizations.
-                Systems that scale sustainably while maintaining quality and coherence.
-              </Text>
-            </div>
-          </div>
-
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-              gap: 0,
-              width: '100%',
-              marginTop: '3rem',
-            }}
-          >
-            <div style={{ marginTop: '4.5rem', marginBottom: '2rem' }}>
-              <Heading level="h2">
-                Security, Reliability & Compliance
-              </Heading>
-            </div>
-
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 0,
-              }}
-            >
-              <Text variant="body" color="primary">
-                Security standards, reliability patterns, and compliance frameworks
-                protecting the ecosystem and its users. Foundational concerns addressed
-                systematically.
-              </Text>
-            </div>
-
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.875rem',
-                marginTop: '1rem',
-              }}
-            >
-              <Text variant="body" color="secondary">
-                Security and reliability built into every system from the start.
-                Patterns and standards making secure, reliable systems the default.
-              </Text>
-
-              <Text variant="body" color="secondary">
-                Security, reliability, and compliance addressed systematically.
-                Infrastructure of trust enabling long-term operation.
-              </Text>
-            </div>
-          </div>
+    <>
+      <div className="mx-auto w-full max-w-6xl px-6 py-16">
+        <p className="text-sm font-medium text-muted-foreground">Practices</p>
+        <h1 className="mt-3 max-w-3xl text-4xl font-semibold tracking-tight md:text-5xl">The work Axiom is accountable for.</h1>
+        <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">
+          Five domains. Each one is a long-term capability of the holding company, and each one is work you can commission.
+        </p>
+        <div className="mt-12 border-t border-[#d5deeb]">
+          {practices.map((practice) => (
+            <article key={practice.id} id={practice.id} className="scroll-mt-24 grid gap-6 border-b border-[#d5deeb] py-10 md:grid-cols-[4.5rem_minmax(0,1.1fr)_minmax(0,0.9fr)] md:gap-8">
+              <span className="text-2xl font-semibold tabular-nums tracking-tight text-[#1c4d8f]">{practice.index}</span>
+              <div>
+                <h2 className="text-2xl font-semibold tracking-tight">{practice.title}</h2>
+                <p className="mt-3 text-sm leading-6">{practice.summary}</p>
+                <p className="mt-3 text-sm leading-6 text-muted-foreground">{practice.when}</p>
+                <Button className="mt-6" asChild>
+                  <Link href={`/contact?intent=${practice.intent}`}>Discuss this practice</Link>
+                </Button>
+              </div>
+              <div>
+                <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">What it covers</p>
+                <ul className="mt-3 space-y-2 text-sm leading-6">
+                  {practice.covers.map((item) => (
+                    <li key={item} className="border-t border-[#d5deeb] pt-2 first:border-0 first:pt-0">{item}</li>
+                  ))}
+                </ul>
+                <p className="mt-6 text-xs font-medium uppercase tracking-wide text-muted-foreground">You leave with</p>
+                <p className="mt-2 text-sm leading-6">{practice.outcome}</p>
+              </div>
+            </article>
+          ))}
         </div>
-      </Container>
-    </Section>
+      </div>
+      <Engagement />
+      <Stack />
+    </>
   );
 }
-

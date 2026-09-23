@@ -1,85 +1,31 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Section, Container, Heading, Text } from '@/components/primitives';
+import { ArrowUpRight } from '@/components/icons';
+import { essays } from '@/lib/site';
+
+export const metadata: Metadata = {
+  title: 'Writing | Axiom Group',
+  description: 'Working notes on systems, intelligence, clarity, and long-term product architecture.',
+  alternates: { canonical: '/writing' },
+};
 
 export default function Writing() {
   return (
-    <Section spacing="md" layer="section" temperature="neutral">
-      <Container>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            gap: 0,
-            maxWidth: '800px',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-          }}
-        >
-          <div style={{ marginBottom: '3rem' }}>
-            <Heading level="h1">
-              Writing
-            </Heading>
-          </div>
-
-          <div style={{ marginBottom: '2rem' }}>
-            <Text variant="body" color="secondary">
-              Notes on systems, design, intelligence, and long-term thinking.
-            </Text>
-          </div>
-
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1rem',
-            }}
-          >
-            <Link href="/writing/systems-are-the-product" style={{ textDecoration: 'none' }}>
-              <Text variant="body" color="primary">
-                Systems Are the Product
-              </Text>
-            </Link>
-
-            <Link href="/writing/visibility-is-a-tax-on-thinking" style={{ textDecoration: 'none' }}>
-              <Text variant="body" color="primary">
-                Visibility Is a Tax on Thinking
-              </Text>
-            </Link>
-
-            <Link href="/writing/long-term-systems" style={{ textDecoration: 'none' }}>
-              <Text variant="body" color="primary">
-                Why Long-Term Systems Outlast Fast Products
-              </Text>
-            </Link>
-
-            <Link href="/writing/ai-as-infrastructure" style={{ textDecoration: 'none' }}>
-              <Text variant="body" color="primary">
-                AI Should Be Infrastructure, Not Spectacle
-              </Text>
-            </Link>
-
-            <Link href="/writing/platform-decay" style={{ textDecoration: 'none' }}>
-              <Text variant="body" color="primary">
-                Most Digital Platforms Decay by Design
-              </Text>
-            </Link>
-
-            <Link href="/writing/software-is-not-the-product" style={{ textDecoration: 'none' }}>
-              <Text variant="body" color="primary">
-                Software Is Rarely the Product
-              </Text>
-            </Link>
-
-            <Link href="/writing/clarity-is-a-competitive-advantage" style={{ textDecoration: 'none' }}>
-              <Text variant="body" color="primary">
-                Clarity Is a Competitive Advantage
-              </Text>
-            </Link>
-          </div>
-        </div>
-      </Container>
-    </Section>
+    <div className="mx-auto w-full max-w-6xl px-6 py-16">
+      <p className="text-sm font-medium text-muted-foreground">Writing</p>
+      <h1 className="mt-3 max-w-3xl text-4xl font-semibold tracking-tight md:text-5xl">Notes on systems, intelligence, and time.</h1>
+      <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">
+        Arguments we use when deciding what to build and what to refuse.
+      </p>
+      <div className="mt-12 divide-y divide-border border-y border-border">
+        {essays.map((essay) => (
+          <Link key={essay.href} href={essay.href} className="group grid gap-2 py-6 md:grid-cols-[1fr_1.4fr_auto] md:items-baseline md:gap-8">
+            <span className="font-medium tracking-tight group-hover:underline">{essay.title}</span>
+            <span className="text-sm leading-6 text-muted-foreground">{essay.summary}</span>
+            <ArrowUpRight className="hidden size-4 text-muted-foreground md:block" />
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 }
-

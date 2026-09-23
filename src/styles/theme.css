@@ -1,12 +1,8 @@
 /**
  * Axiom Group Design Token System
- * 
- * Philosophy:
- * - Dark premium, layered and breathable
- * - Stillness by default, response on intent
- * - Light appears as feedback, not decoration
- * - No trend-based styling
- * - Scalable to sub-companies
+ *
+ * Light, high-contrast canvas. Dark surfaces are reserved for
+ * instruments and visuals, where they have something to show.
  */
 
 :root {
@@ -18,17 +14,17 @@
      provides subtle separation without harsh contrast.
      Hover/active states use lightening logic for feedback. */
   
-  /* Base canvas - near-black foundation */
-  --color-layer-base: oklch(0.08 0 0);
+  /* Base canvas */
+  --color-layer-base: oklch(0.985 0.004 255);
   
-  /* Section surface - slightly elevated from base */
-  --color-layer-section: oklch(0.10 0 0);
+  /* Section surface */
+  --color-layer-section: oklch(0.962 0.008 255);
   
-  /* Elevated surface - cards and floating elements */
-  --color-layer-elevated: oklch(0.12 0 0);
+  /* Elevated surface - cards */
+  --color-layer-elevated: oklch(0.995 0.002 255);
   
-  /* Border and divider - subtle separation */
-  --color-layer-border: oklch(0.15 0 0);
+  /* Border and divider */
+  --color-layer-border: oklch(0.88 0.012 255);
   
   /* Hover state - lightening multiplier (applied via opacity/lightness) */
   --color-layer-hover-lighten: 0.08;
@@ -47,17 +43,10 @@
      Neutral: no temperature shift (default)
      Warm: slight warm shift (60° hue, minimal chroma) */
   
-  /* Base layer with cool temperature - very subtle blue shift */
-  --color-layer-base-cool: oklch(0.08 0.002 240);
-  
-  /* Section layer with cool temperature - very subtle blue shift */
-  --color-layer-section-cool: oklch(0.10 0.002 240);
-  
-  /* Section layer with neutral temperature - no shift (default) */
-  --color-layer-section-neutral: oklch(0.10 0 0);
-  
-  /* Section layer with warm temperature - very subtle warm shift */
-  --color-layer-section-warm: oklch(0.10 0.002 60);
+  --color-layer-base-cool: oklch(0.975 0.012 250);
+  --color-layer-section-cool: oklch(0.955 0.018 245);
+  --color-layer-section-neutral: oklch(0.965 0.008 255);
+  --color-layer-section-warm: oklch(0.97 0.014 85);
 
 
   /* ============================================
@@ -68,14 +57,9 @@
      Primary text is high contrast, secondary provides context,
      muted text is for metadata and less important information. */
   
-  /* Primary text - maximum readability */
-  --color-text-primary: oklch(0.95 0 0);
-  
-  /* Secondary text - contextual information */
-  --color-text-secondary: oklch(0.70 0 0);
-  
-  /* Muted text - metadata, labels, less important */
-  --color-text-muted: oklch(0.50 0 0);
+  --color-text-primary: oklch(0.22 0.04 262);
+  --color-text-secondary: oklch(0.4 0.03 262);
+  --color-text-muted: oklch(0.5 0.02 262);
 
 
   /* ============================================
@@ -86,14 +70,9 @@
      The accent is muted to maintain sophistication and avoid
      decorative use. Restricted usage ensures it remains impactful. */
   
-  /* Muted accent - platinum/gold tone */
-  --color-accent-base: oklch(0.75 0.05 85);
-  
-  /* Accent hover state - subtle brightening */
-  --color-accent-hover: oklch(0.80 0.05 85);
-  
-  /* Accent active state */
-  --color-accent-active: oklch(0.70 0.05 85);
+  --color-accent-base: oklch(0.46 0.16 258);
+  --color-accent-hover: oklch(0.4 0.16 258);
+  --color-accent-active: oklch(0.34 0.14 258);
   
   /* Accent usage rules (documentation only - enforced in code):
      - CTA buttons and links
@@ -111,19 +90,16 @@
      changes signal state transitions. */
   
   /* Glow intensity levels */
-  --glow-intensity-low: 0 0 8px oklch(0.75 0.05 85 / 0.15);
-  --glow-intensity-medium: 0 0 16px oklch(0.75 0.05 85 / 0.25);
-  --glow-intensity-high: 0 0 24px oklch(0.75 0.05 85 / 0.35);
+  --glow-intensity-low: 0 0 0 4px oklch(0.46 0.16 258 / 0.16);
+  --glow-intensity-medium: 0 0 0 4px oklch(0.46 0.16 258 / 0.28);
+  --glow-intensity-high: 0 0 0 5px oklch(0.46 0.16 258 / 0.36);
   
-  /* Shadow elevation - rest state (minimal) */
-  --shadow-elevation-rest: 0 2px 4px oklch(0 0 0 / 0.2);
-  
-  /* Shadow elevation - hover state (elevated) */
-  --shadow-elevation-hover: 0 4px 12px oklch(0 0 0 / 0.3);
+  --shadow-elevation-rest: 0 1px 2px oklch(0.22 0.04 262 / 0.06);
+  --shadow-elevation-hover: 0 18px 40px oklch(0.25 0.04 262 / 0.12);
   
   /* Border contrast states */
   --border-contrast-rest: var(--color-layer-border);
-  --border-contrast-hover: oklch(0.20 0 0);
+  --border-contrast-hover: oklch(0.55 0.06 258);
   --border-contrast-focus: var(--color-accent-base);
   --border-contrast-active: var(--color-accent-active);
 
@@ -163,11 +139,11 @@
      that feel premium and organized. */
   
   /* Section vertical spacing scale */
-  --spacing-section-xs: 4rem;      /* 64px - tight sections */
-  --spacing-section-sm: 5.5rem;    /* 88px - standard sections */
-  --spacing-section-md: 8rem;      /* 128px - prominent sections */
-  --spacing-section-lg: 11rem;     /* 176px - major sections */
-  --spacing-section-xl: 18rem;     /* 288px - hero sections */
+  --spacing-section-xs: 2.75rem;
+  --spacing-section-sm: 3.5rem;
+  --spacing-section-md: 4.75rem;
+  --spacing-section-lg: 6rem;
+  --spacing-section-xl: 5.5rem;
   
   /* Internal component spacing scale */
   --spacing-component-xs: 0.25rem;   /* 4px - tight internal */
@@ -184,8 +160,8 @@
      Intent: Self-hosted fonts for headings (serif) and body (sans-serif).
      System font stacks as fallbacks until font files are added. */
 
-  --font-serif: Georgia, "Times New Roman", serif;
-  --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: var(--font-outfit), "Segoe UI", sans-serif;
+  --font-sans-serif: var(--font-outfit), "Segoe UI", sans-serif;
 }
 
 /* ============================================
@@ -215,19 +191,6 @@
 
 .section-layer-elevated {
   background-color: var(--color-layer-elevated);
-}
-
-/* Text color utilities */
-.text-primary {
-  color: var(--color-text-primary);
-}
-
-.text-secondary {
-  color: var(--color-text-secondary);
-}
-
-.text-muted {
-  color: var(--color-text-muted);
 }
 
 /* Button base styles */

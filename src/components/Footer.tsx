@@ -1,70 +1,41 @@
 import Link from 'next/link';
-import { Container, Text, Divider } from './primitives';
-import { tokens } from '@/lib/tokens';
+import { Separator } from '@/components/ui/separator';
+import { contactEmail } from '@/lib/site';
 
-/**
- * Footer Component
- * 
- * Intent: System closure with institutional finality. Minimal copy,
- * increased vertical breathing room. Footer feels final, not informational.
- * No social links, no marketing language. Uses primitives only.
- */
+const links = [
+  { href: '/ecosystem', label: 'Practices' },
+  { href: '/writing', label: 'Writing' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+  { href: '/privacy', label: 'Privacy' },
+  { href: '/terms', label: 'Terms' },
+  { href: '/legal', label: 'Legal' },
+];
+
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const year = new Date().getFullYear();
 
   return (
-    <footer
-      style={{
-        backgroundColor: 'transparent',
-        paddingTop: tokens.spacing.section.lg,
-        paddingBottom: tokens.spacing.section.lg,
-        marginTop: tokens.spacing.section.xl,
-      }}
-    >
-      <Container>
-        <Divider />
-        <div
-          style={{
-            marginTop: tokens.spacing.component.xl,
-            display: 'flex',
-            flexDirection: 'column',
-            gap: tokens.spacing.component.md,
-          }}
-        >
-          <Text variant="meta" color="muted">
-            © {currentYear} Axiom Group. All rights reserved.
-          </Text>
-          <Text variant="meta" color="muted">
-            Building for the long term.
-          </Text>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              gap: tokens.spacing.component.lg,
-              flexWrap: 'wrap',
-              marginTop: tokens.spacing.component.sm,
-            }}
-          >
-            <Link href="/privacy" className="link-base" style={{ textDecoration: 'none' }}>
-              <Text as="span" variant="meta" color="muted">
-                Privacy
-              </Text>
-            </Link>
-            <Link href="/terms" className="link-base" style={{ textDecoration: 'none' }}>
-              <Text as="span" variant="meta" color="muted">
-                Terms
-              </Text>
-            </Link>
-            <Link href="/legal" className="link-base" style={{ textDecoration: 'none' }}>
-              <Text as="span" variant="meta" color="muted">
-                Legal
-              </Text>
-            </Link>
-          </div>
+    <footer className="mt-8">
+      <div className="mx-auto w-full max-w-6xl px-6 pb-10">
+        <Separator />
+        <div className="flex flex-col gap-4 pt-8 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
+          <p className="flex items-center gap-2 text-[#122033]">
+            <img src="/logo.svg" alt="" width={20} height={20} className="size-5 shrink-0" />
+            <span>© {year} Axiom Group</span>
+          </p>
+          <nav className="flex flex-wrap gap-x-5 gap-y-2" aria-label="Footer">
+            {links.map((link) => (
+              <Link key={link.href} href={link.href} className="hover:text-foreground">
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <a href={`mailto:${contactEmail}`} className="hover:text-foreground">
+            {contactEmail}
+          </a>
         </div>
-      </Container>
+      </div>
     </footer>
   );
 }
-

@@ -1,48 +1,46 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { isIntentId } from '@/lib/site';
+import { saveInquiry } from '@/lib/inquiries';
 
-/**
- * Contact API Route
- * 
- * Intent: Handle contact form submissions with minimal processing.
- * Returns appropriate responses without exposing internal details.
- */
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData();
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
+    const name = String(formData.get('name') || '').trim();
+    const email = String(formData.get('email') || '').trim();
+    const organization = String(formData.get('organization') || '').trim();
+    const intent = String(formData.get('intent') || '').trim();
+    const message = String(formData.get('message') || '').trim();
 
-    // Basic validation
-    if (!name || !email || !message) {
+    if (!name || !email || !message || !isIntentId(intent)) {
       return NextResponse.json(
-        { error: 'All fields are required' },
-        { status: 400 }
+        { error: 'Name, email, topic, and message are required' },
+        { status: 400 },
       );
     }
 
-    // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email as string)) {
-      return NextResponse.json(
-        { error: 'Invalid email address' },
-        { status: 400 }
-      );
+    if (!emailRegex.test(email)) {
+      return NextResponse.json({ error: 'Invalid email address' }, { status: 400 });
     }
 
-    // TODO: Implement email sending or storage logic here
-    // For now, we'll just return a success response
-    
+    await saveInquiry({
+      name,
+      email,
+      organization,
+      intent,
+      message,
+      createdAt: new Date().toISOString(),
+    });
+
     return NextResponse.json(
-      { message: 'Your message has been received. We will respond as appropriate.' },
-      { status: 200 }
+      { message: 'Your message has been received.' },
+      { status: 200 },
     );
   } catch (error) {
     console.error('Contact form error:', error);
     return NextResponse.json(
       { error: 'An error occurred while processing your request' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
-

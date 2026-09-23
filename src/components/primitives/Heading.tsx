@@ -1,12 +1,10 @@
 import { type ReactNode } from 'react';
-import { tokens } from '@/lib/tokens';
 
 /**
  * Heading Primitive
- * 
- * Intent: Semantic heading levels (h1-h4) with serif font
- * and strong hierarchy via size and weight only. No decorative
- * effects - pure typographic hierarchy.
+ *
+ * Semantic heading levels. Size and weight come from global
+ * heading classes so type can scale with the viewport.
  */
 type HeadingLevel = 'h1' | 'h2' | 'h3' | 'h4';
 
@@ -14,51 +12,22 @@ interface HeadingProps {
   level: HeadingLevel;
   children: ReactNode;
   className?: string;
+  id?: string;
 }
 
-const headingStyles: Record<HeadingLevel, React.CSSProperties> = {
-  h1: {
-    fontSize: '3.75rem',
-    fontWeight: 600,
-    lineHeight: 1.2,
-    letterSpacing: '-0.04em',
-    color: tokens.textColors.primary,
-    fontFamily: 'var(--font-serif)',
-  },
-  h2: {
-    fontSize: '2.25rem',
-    fontWeight: 600,
-    lineHeight: 1.3,
-    letterSpacing: '-0.01em',
-    color: tokens.textColors.primary,
-    fontFamily: 'var(--font-serif)',
-  },
-  h3: {
-    fontSize: '1.5rem',
-    fontWeight: 500,
-    lineHeight: 1.4,
-    letterSpacing: '0',
-    color: tokens.textColors.primary,
-    fontFamily: 'var(--font-serif)',
-  },
-  h4: {
-    fontSize: '1.25rem',
-    fontWeight: 500,
-    lineHeight: 1.5,
-    letterSpacing: '0',
-    color: tokens.textColors.primary,
-    fontFamily: 'var(--font-serif)',
-  },
+const headingClass: Record<HeadingLevel, string> = {
+  h1: 'heading-h1',
+  h2: 'heading-h2',
+  h3: 'heading-h3',
+  h4: 'heading-h4',
 };
 
-export function Heading({ level, children, className = '' }: HeadingProps) {
+export function Heading({ level, children, className = '', id }: HeadingProps) {
   const Component = level;
-  const style = headingStyles[level];
 
   return (
-    <Component className={className} style={style}>
+    <Component id={id} className={`${headingClass[level]} ${className}`.trim()}>
       {children}
     </Component>
   );
 }
-

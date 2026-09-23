@@ -2,225 +2,66 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState, useRef } from 'react';
-import { Container, Text } from './primitives';
-import { tokens } from '@/lib/tokens';
+import { useEffect, useState } from 'react';
+import { Menu, X } from '@/components/icons';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
-/**
- * Header Component
- * 
- * Intent: Institutional boundary with authoritative navigation hierarchy.
- * Primary links (About, Ecosystem) appear neutral and authoritative.
- * Secondary links (Contact) appear slightly muted and subordinate.
- * Current page is subtly acknowledged through tone, not decoration.
- * Uses spacing for vertical presence, not height.
- */
+const links = [
+  { href: '/ecosystem', label: 'Practices' },
+  { href: '/writing', label: 'Writing' },
+  { href: '/about', label: 'About' },
+];
+
 export function Header() {
   const pathname = usePathname();
-  const [mounted, setMounted] = useState(false);
-  const headerRef = useRef<HTMLElement>(null);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-    // No marginBottom needed - Hero section handles its own spacing
+    setOpen(false);
   }, [pathname]);
 
-  // Use pathname only after mount to avoid hydration mismatch
-  const currentPath = mounted ? pathname : null;
-
   return (
-    <header
-      ref={headerRef}
-      style={{
-        backgroundColor: 'transparent',
-        paddingTop: tokens.spacing.section.sm,
-        paddingBottom: tokens.spacing.section.sm,
-        marginBottom: 0, // Updated via useEffect after mount to avoid hydration mismatch
-      }}
-    >
-      <Container>
-        <nav
-          aria-label="Main navigation"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-          }}
+    <header className="sticky top-0 z-40 border-b border-[#d5deeb] bg-white/85 backdrop-blur-md">
+      <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-6">
+        <Link href="/" className="flex items-center gap-2.5 text-sm font-semibold tracking-tight text-[#0b1f3a]">
+          <img src="/logo.svg" alt="" width={32} height={32} className="size-8 shrink-0" />
+          Axiom Group
+        </Link>
+        <Button
+          variant="outline"
+          size="icon"
+          className="md:hidden"
+          aria-expanded={open}
+          aria-controls="site-nav"
+          onClick={() => setOpen((value) => !value)}
         >
-          <div>
-            <Link
-              href="/"
-              style={{
-                textDecoration: 'none',
-                color: 'inherit',
-              }}
-              aria-label="Axiom Group home"
-            >
-              <Text
-                as="span"
-                variant="body"
-                color="primary"
-                style={{
-                  fontSize: '1.25rem',
-                  fontWeight: 500,
-                  letterSpacing: '-0.01em',
-                }}
-              >
-                Axiom Group
-              </Text>
-            </Link>
-          </div>
-          <div
-            style={{
-              display: 'flex',
-              gap: tokens.spacing.component.xl,
-              alignItems: 'center',
-            }}
-          >
-            <Link 
-              href="/about" 
-              className="link-base" 
-              aria-label="View about"
-              style={{ textDecoration: 'none' }}
-              onMouseEnter={(e) => {
-                if (currentPath !== '/about') {
-                  const textElement = e.currentTarget.querySelector('span');
-                  if (textElement) {
-                    textElement.style.color = tokens.textColors.primary;
-                  }
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (currentPath !== '/about') {
-                  const textElement = e.currentTarget.querySelector('span');
-                  if (textElement) {
-                    textElement.style.color = tokens.textColors.secondary;
-                  }
-                }
-              }}
-            >
-              <Text 
-                as="span" 
-                variant="body" 
-                style={{
-                  color: currentPath === '/about' 
-                    ? tokens.textColors.primary 
-                    : tokens.textColors.secondary,
-                  transition: 'color var(--motion-duration-standard) var(--motion-easing-standard)',
-                }}
-              >
-                About
-              </Text>
-            </Link>
-            <Link 
-              href="/writing" 
-              className="link-base" 
-              aria-label="View writing"
-              style={{ textDecoration: 'none' }}
-              onMouseEnter={(e) => {
-                if (currentPath !== '/writing') {
-                  const textElement = e.currentTarget.querySelector('span');
-                  if (textElement) {
-                    textElement.style.color = tokens.textColors.primary;
-                  }
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (currentPath !== '/writing') {
-                  const textElement = e.currentTarget.querySelector('span');
-                  if (textElement) {
-                    textElement.style.color = tokens.textColors.secondary;
-                  }
-                }
-              }}
-            >
-              <Text 
-                as="span" 
-                variant="body" 
-                style={{
-                  color: currentPath === '/writing' 
-                    ? tokens.textColors.primary 
-                    : tokens.textColors.secondary,
-                  transition: 'color var(--motion-duration-standard) var(--motion-easing-standard)',
-                }}
-              >
-                Writing
-              </Text>
-            </Link>
-            <Link 
-              href="/ecosystem" 
-              className="link-base" 
-              aria-label="View ecosystem"
-              style={{ textDecoration: 'none' }}
-              onMouseEnter={(e) => {
-                if (currentPath !== '/ecosystem') {
-                  const textElement = e.currentTarget.querySelector('span');
-                  if (textElement) {
-                    textElement.style.color = tokens.textColors.primary;
-                  }
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (currentPath !== '/ecosystem') {
-                  const textElement = e.currentTarget.querySelector('span');
-                  if (textElement) {
-                    textElement.style.color = tokens.textColors.secondary;
-                  }
-                }
-              }}
-            >
-              <Text 
-                as="span" 
-                variant="body" 
-                style={{
-                  color: currentPath === '/ecosystem' 
-                    ? tokens.textColors.primary 
-                    : tokens.textColors.secondary,
-                  transition: 'color var(--motion-duration-standard) var(--motion-easing-standard)',
-                }}
-              >
-                Ecosystem
-              </Text>
-            </Link>
-            <Link 
-              href="/contact" 
-              className="link-base" 
-              aria-label="View contact"
-              style={{ textDecoration: 'none' }}
-              onMouseEnter={(e) => {
-                if (currentPath !== '/contact') {
-                  const textElement = e.currentTarget.querySelector('span');
-                  if (textElement) {
-                    textElement.style.color = tokens.textColors.secondary;
-                  }
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (currentPath !== '/contact') {
-                  const textElement = e.currentTarget.querySelector('span');
-                  if (textElement) {
-                    textElement.style.color = tokens.textColors.muted;
-                  }
-                }
-              }}
-            >
-              <Text 
-                as="span" 
-                variant="body" 
-                style={{
-                  color: currentPath === '/contact' 
-                    ? tokens.textColors.secondary 
-                    : tokens.textColors.muted,
-                  transition: 'color var(--motion-duration-standard) var(--motion-easing-standard)',
-                }}
-              >
-                Contact
-              </Text>
-            </Link>
-          </div>
+          {open ? <X /> : <Menu />}
+          <span className="sr-only">{open ? 'Close menu' : 'Open menu'}</span>
+        </Button>
+        <nav
+          id="site-nav"
+          aria-label="Main navigation"
+          className={cn(
+            'absolute left-0 right-0 top-16 flex flex-col gap-1 border-b border-border bg-background p-4 md:static md:flex md:flex-row md:items-center md:gap-1 md:border-0 md:bg-transparent md:p-0',
+            open ? 'flex' : 'hidden md:flex',
+          )}
+        >
+          {links.map((link) => {
+            const current = pathname === link.href || pathname.startsWith(`${link.href}/`);
+            return (
+              <Button key={link.href} variant="ghost" size="sm" asChild>
+                <Link href={link.href} aria-current={current ? 'page' : undefined} className={cn(current && 'bg-accent')}>
+                  {link.label}
+                </Link>
+              </Button>
+            );
+          })}
+          <Button size="sm" className="mt-2 md:mt-0 md:ml-2" asChild>
+            <Link href="/contact">Start a conversation</Link>
+          </Button>
         </nav>
-      </Container>
+      </div>
     </header>
   );
 }
-
