@@ -16,6 +16,15 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Visit counts
+
+The counts are not linked from the public site. Open them directly:
+
+- On this computer: [http://localhost:3000/admin/visits](http://localhost:3000/admin/visits)
+- On the live site: [https://axiomgroup.services/admin/visits](https://axiomgroup.services/admin/visits)
+
+The live page asks for a password. That password is the Vercel environment variable `ANALYTICS_PASSWORD` (Production). After you add or change it, redeploy the production deployment, then open the live address above and enter the same password.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
