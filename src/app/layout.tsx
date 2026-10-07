@@ -4,6 +4,7 @@ import "./globals.css";
 import "../styles/motion.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { VisitBeacon } from "@/components/VisitBeacon";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -46,6 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={outfit.variable}>
       <body suppressHydrationWarning className="min-h-screen bg-[#f4f7fb] font-sans text-[#122033] antialiased">
+        <VisitBeacon />
         <Header />
         <main>{children}</main>
         <Footer />

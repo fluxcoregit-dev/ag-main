@@ -61,7 +61,7 @@ export default function Privacy() {
 
             <div style={{ marginTop: '1rem' }}>
               <Text variant="body" color="secondary">
-                No behavioral tracking, advertising tracking, or third-party analytics.
+                Page views are counted on this site, with the country and continent of the connection, the page opened, the referring site, and a general device and browser name. No advertising network is involved. The network address is used only to find the country, then discarded.
               </Text>
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function Privacy() {
             </div>
 
             <Text variant="body" color="primary">
-              No cookies for tracking, advertising, or profiling.
+              One first-party cookie tells a returning browser from a new one, so the visit count is not only page views. It is not used for advertising.
             </Text>
           </div>
 
